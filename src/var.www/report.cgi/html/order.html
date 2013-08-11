@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- $Gateweaver: order.html,v 1.5 2007/09/12 17:08:45 cmaxwell Exp $ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>%%TITLE%%</title>
+	<link rel="stylesheet" type="text/css" href="%%BASECSS%%" />
+</head>
+
+<body>
+
+<div id="main">
+%%HEADER%%
+
+<div class="outer"><div class="inner"><div class="float-wrap"><div id="content">
+<h2>Orders %%TIMESTART%% - %%TIMESTOP%%</h2>
+<table class="list">
+<tr>
+	<th scope="col"><b>ID</b></th>
+	<th scope="col"><b>Timestamp</b></th>
+	<th scope="col"><b>Type</b></th>
+	<th scope="col"><b>Payment</b></th>
+	<th scope="col"><b>Subtotal</b></th>
+	<th scope="col"><b>Discount</b></th>
+	<th scope="col"><b>Delivery</b></th>
+	<th scope="col"><b>Credit</b></th>
+	<th scope="col"><b>Tax1</b></th>
+	<th scope="col"><b>Tax2</b></th>
+	<th scope="col"><b>Total</b></th>
+</tr>
+
+%%ROWRESET%%
+%%ORDERLIST%%
+
+<tr class="total">
+	<td></td><!-- ID -->
+	<td></td><!-- Timestamp -->
+	<td></td><!-- Type -->
+	<td></td><!-- Payment -->
+	<td><hr /></td><!-- Subtotal -->
+	<td><hr /></td><!-- Discount -->
+	<td><hr /></td><!-- Delivery -->
+	<td><hr /></td><!-- Credit -->
+	<td><hr /></td><!-- Tax1 -->
+	<td><hr /></td><!-- Tax2 -->
+	<td><hr /></td><!-- Total -->
+</tr>
+
+%%ORDERTOTALS%%
+
+</table>
+</div></div></div></div>
+</div>
+
+%%FOOTER%%
+
+</body>
+</html>

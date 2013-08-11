@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- $Gateweaver: helpthres.html,v 1.2 2007/10/09 18:44:27 cmaxwell Exp $ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Manorsoft News: Threshold Help</title>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=iso-8859-1" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<link rel="stylesheet" type="text/css" href="http://www.manorsoft.ca/style.css" />
+	<link rel="shortcut icon" href="http://www.manorsoft.ca/favicon.ico" />
+	<link REL="alternate" type="application/xml" title="RSS" href="http://news.manorsoft.ca/cgi?action=rss">
+</head>
+<body>
+
+%%HEADER%%
+
+<div class="float-wrap">
+	<div id="content">
+		<div class="contentWrap">
+
+<h2>Thresholds</h2>
+
+<p>Thresholds can be used to filter out comments based on moderation results.
+Results consist of count (total number of votes cast), up (number of positive
+votes), down (number of negative votes) and sum (up - down, possibly negative
+when down &gt; up).  Two kinds of filters can be used.</p>
+
+<h3>Simple thresholds</h3>
+
+<p>A single numerical value filters out all comments with sum below the
+specified value.</p>
+
+<h3>Advanced thresholds</h3>
+
+<p>Arbitrary expressions can specify what comments to show, using the variables
+c (count), u (up), d (down) and s (sum), like</p>
+
+<ul>
+	<li>s &gt;= 0 <i>show only comments with sum greater or equal 0</i></li>
+	<li>(u * 100) / c &gt;= 75 <i>show only comments with at least 75% up
+	votes</i></li>
+	<li>c &lt; 5 | (u * 100) / c &gt;= 75 <i>same as above, but show comments
+	with less than 5 votes, too</i></li>
+	<li>c = 0 <i>show only unmoderated comments</i></li>
+	<li>c &gt; 10 &amp; s < 3 & s > -3 <i>show comments with many votes, but
+	sum near zero (highly polarizing comments)</i></li>
+</ul>
+
+<p>Arithmetic operators are +, -, * and / (division by zero results in
+value zero), calculation is floating point.</p>
+
+<p>Comparison operators are = (equal), != (unequal), &lt; (less), &lt;= (less
+or equal), &gt; (greater) and &gt;= (greater or equal).</p>
+
+<p>Boolean operators are | (or), &amp; (and).</p>
+
+<p>Parentheses work around arithmetic and comparitive parts, not boolean parts
+(yet).</p>
+
+		</div>
+	</div>
+
+	<div id="left">
+		%%MENU%%
+	</div>
+	<div class="clear"></div>
+
+</div><!-- float-wrap -->
+
+%%FOOTER%%
+
+</body>
+</html>

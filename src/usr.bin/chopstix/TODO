@@ -1,0 +1,21 @@
+# $Gateweaver: TODO,v 1.1 2006/01/04 02:51:35 cmaxwell Exp $
+
+Some random ideas that might be useful to implement.
+
+- no cash-out on credit card items
+- multiple menu item names: display, customer, kitchen
+- order editing
+- print modules
+  currently prints a 2-column receipt using epson codes.  Allow changing to
+  paginated, single page, etc.
+- dual-station print
+  print customer receipt at counter, kitchen ticket in kitchen
+- time-shifted printing
+  allow orders to be delayed for later processing
+- credit card / debit processing
+- cash accounting
+- gift cards / coupons
+- reporting:
+	- daily, weekly, monthly, yearly sales
+	- time-of-day sales
+	- item usage

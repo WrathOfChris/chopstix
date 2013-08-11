@@ -1,0 +1,166 @@
+ML184Turbo Commands - Microline Standard Commands
+
+Normally the commands in this table will override the switch settings.
+Commands are canceled and the printer returns to factory settings when the
+printer receives an Initialization or when it is turned off and then on again.
+
+COMMAND					ASCII	DEC	HEX 
+
+Character format:				
+Set 10 CPI 				RS 	30 	1E 	
+Set 12 CPI 				FS 	28 	1C 	
+Set 17.1 CPI 				GS 	29 	1D 	
+Begin subscript 			ESC L	27 76 	1B 4C 	
+End subscript 				ESC M	27 77 	1B 4D 	
+Begin superscript 			ESC J	27 74	1B 4A	
+End superscript				ESC K	27 75	1B 4B	
+Begin emphasized printing		ESC T	27 84	1B 54	
+Begin enhanced printing 		ESC H	27 72	1B 48	
+End emphasized/enhanced printing	ESC I	27 73	1B 49	
+Double width				US	31	1F	
+Begin italics				ESC ! /	27 33 47	1B 21 2F	
+End italics				ESC ! *	27 33 42	1B 21 2A	
+Select character set			ESC ! n	27 33 n	1B 21 n	
+					n=48: standard character set				
+					n=49: block graphics				
+					n=64: slashed zero				
+					n=65: unslashed zero				
+					n=66: British				
+					n=67: German				
+					n=68: French				
+					n=74: French Canadian				
+					n=75: Spanish				
+				
+Page format:				
+Set to horizontal tab stops		ESC HT n	27 9 n	1B 09 n	
+					n=0 to 127				
+					n=0: clear tabs				
+Set left margin				EC % C nnn	27 37 67 nnn	1B 25 43	
+					nnn=000 to 899 (nnn/120")				
+Set form length by lines		ESC F nn	27 70 nn	1B 46 nn	
+					nn=00 to 99				
+Set top of form				ESC 5	27 53	1B 35	
+Skip over perforation			ESC % S n	27 37 83 n	1B 25 53 n	
+					n=0: no skip 				
+					n=3: 1 inch skip				
+				
+Movement control:				
+Carriage return				CR	13	0D	
+Horizontal tab				HT 	9	09	
+Form feed				FF 	12	0C	
+Line feed (with carriage return)	LF	10	0A	
+Line feed (without carriage return)	ESC DC2	27 18	1B 12	
+Fine line feed				ESC % 5 n	27 37 53 n	1B 25 35 n	
+					n=0 to 127 (n/144")				
+Skip nn lines				ESC VT nn	27 11 nn	1B 0B nn	
+					n=00 to 99				
+Vertical tab				VT	11	0B	
+				
+Line Spacing:				
+Set 6 lpi line spacing			ESC 6	27 54	1B 36	
+Set 8 lpi line spacing			ESC 8	27 56	1B 38	
+Set n/144" line spacing			ESC % 9 n	27 37 57 n	1B 25 39 n	
+n=0 to 127				
+				
+Printing features:				
+Select Utility				ESC 0	27 48	1B 30	
+Select High Speed Draft			ESC # 0	27 35 48	1B 23 30	
+Select NLQ				ESC 1	27 49	1B 31	
+Begin underlining			ESC C	27 67	1B 43	
+End underlining				ESC D	27 68	1B 44	
+				
+Bit image graphics:				
+Double density				ESC R	27 82	1B 52	
+Single density				ESC P or ESC Q	27 80 or 27 81	1B 50 or 51	
+Begin graphics				ETX	3	03	
+End graphics				ETX STX	3 2	03 02	
+Text line feed with carriage return	ETX LF	3 10	03 0A	
+Text line feed without carriage return	ETX DC2	3 18	03 12	
+Graphics 14/144" line feed with carriage return	ETX SO	3 14	03 0E	
+Graphics 14/144" line with without carriage return	ETX DC4	3 20	03 14	
+				
+Miscellaneous:				
+Reset					CAN	24	18	
+Paper-out sensor			ESC E n	27 69 n	1B 45 n	
+					n="1": sensor disabled				
+					n="2": sensor enabled				
+Begin uni-directional printing		ESC -	27 45	1B 2D	
+Begin bi-directional printing		ESC =	27 61	1B 3D
+
+-------------------------------------------------------------------------------
+
+ML184 Turbo IBM Control Codes
+
+Command					ASCII	Decimal	Hexadecimal	
+
+Character format:
+Set 10 cpi				DC2	18	12	
+Set 12 cpi				ESC :	27 58	1B 3A	
+Set 17 cpi				SI	15	OF	
+Begin Superscript/subscript		ESC S n	27 83 n	1B 53 n	
+					n = 0: superscript	n = 1: subscript
+End superscript/subscript		ESC T	27 84	1B 54	
+Begin emphasized printing		ESC E	27 69	1B 45	
+End emphasized printing			ESC F	27 70	1B 46	
+Begin enhanced printing			ESC G	27 71	1B 47	
+End enhanced printing			ESC H	27 72	1B 48	
+Double width printing			ESC W n	27 87 n	1B 57 n	
+					n=0: end	n=1: begin
+Begin one line double width printing	SO	14	OE	
+End one line double width printing	DC4	20	14	
+Begin italics				ESC % G	27 37 71	1B 25 47	
+End italics				ESC % H	27 37 72	1B 25 48	
+IBM character set 1			ESC 7	27 55	1B 37	
+IBM character set 2			ESC 6	27 54	1B 36	
+
+Page format:
+Set horizontal tab stops		ESC D n1..nk	27 68 n1...nk	1B 44 n1...nk	
+					k = 1 to 28
+					n = 0: cancel all tab stops
+Set form length in inches		ESC C NUL m	27 67 O m	1B 43 00 m	
+					m = 1 to 22
+					n = 0: reset to default
+Set form length in lines n=1 to 27	ESC C n	27 67 n	1B 43 n	
+Disable skip over perforation		ESC N 1	27 78 1	1B 4E O1	
+Enable skip over perforation		ESC O	27 79	1B 4F	
+
+Movement control:
+Carriage return				CR	13	OD	
+Horizontal tab				HT	9	O9	
+Form feed				FF	12	OC	
+Line feed				LF	10	OA	
+line feed				ESC J n	27 74 n	1B 4A n	
+					m = 0 to 255
+					n = 0: carriage return w/o line feed
+Vertical tab				VT	11	OB	
+
+Line Spacing:
+8 lpi line spacing			ESC 0	27 48	1B 30	
+7/72 line spacing			ESC 1	27 49	1B 31	
+n/72 line spacing			ESC A n	27 65 n	1B 41 n	
+					n = 1 to 85
+Begin line spacing set by 		ESC A n	ESC 2	27 50	1B 32	
+Set n/216 line spacing			ESC 3 m	27 51 m	1B 33 m	
+					n = 1 to 255
+
+Printing features:
+Select print quality			ESC 1 n	27 73 n	1B 49 n	
+					n=1: utility	n=2: enhanced	n=3: NLQ
+High/super speed draft			ESC # 0	27 35 48	1B 23 30	
+Underlining				ESC - n	27 45 n	1B 2D n	
+					n = 0: end	n = 1:begin
+Single density				ESC K n1 n2	27 75 n1 n2	1B 4B n1 n2	
+					n1= 0 to 255	n2= 0 to 7
+Half-speed, double density		ESC L n1 n2	27 76 n1 n2	1B 4C n1 n2	
+					n1 = 0 to 255	n2 = 0 to 7
+Full-speed double density		ESC Y n1 n2	27 89 n1 n2	1B 59 n1 n2	
+					n1 = 0 to 255	n2 = 0 to 7
+Quadruple density			ESC Z n1 n2	27 90 n1 n2	1B 5A n1 n2	
+					n1 = 0 to 255	n2 = 0 to 7
+Unidirectional printing			ESC U n	27 85 n	1B 55 n	
+					n = 1: unidirectional	n = 0: bidirectional
+
+Miscellaneous:
+Enable paper out sensor			ESC 9	27 57	1B 39	
+Disable paper out sensor		ESC 8	27 56	1B 38	
+Cancel					CAN	24	18

@@ -1,0 +1,24 @@
+@comment $OpenBSD$
+ChopstixLogo.gif
+cust_credit.html
+cust_detail.html
+cust_info.html
+customer.html
+footer.html
+front.html
+header.html
+item.html
+item_info.html
+item_inforule.html
+item_infosub.html
+order.html
+order_detail.html
+order_item.html
+order_list.html
+order_total.html
+payment.html
+report.cgi
+report.conf
+report.css
+report_print.css
+time.html

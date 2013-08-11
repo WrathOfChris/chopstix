@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /auth/
+Disallow: /build/
+Disallow: /errata/
+Disallow: /htdig/
+Disallow: /html/
+Sitemap: http://news.manorsoft.ca/sitemap.xml

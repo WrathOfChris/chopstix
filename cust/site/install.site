@@ -1,0 +1,56 @@
+#!/bin/sh
+# $Gateweaver: install.site,v 1.18 2008/01/21 21:30:20 cmaxwell Exp $
+# Copyright (c) 2007 Christopher Maxwell.  All rights reserved.
+VER=1.1
+
+# Set system time
+#
+rdate -ncv time.manorsoft.ca
+
+# Chopstix default user/group
+useradd -m -G operator,dialer -L chopstix \
+	-c "Chopstix User" -g =uid -u 200 -p '%%PASSWORD%%' chopstix
+
+# WWW needs to be part of chopstix group for cgi
+usermod -G chopstix www
+
+# Chopstix service account
+useradd -m -G wheel,operator,wsrc,staff,named,www,dialer,chopstix -L staff \
+	-c "Chopstix Service" -g =uid -u 100 service
+
+# Chopstix manager account
+useradd -m -G wheel,operator,staff,www,dialer,chopstix -L staff \
+	-c "Chopstix Manager" -g =uid -u 201 -p '%%PASSWORD%%' manager
+
+# Enable floppy/cdrom/usb mounting
+mkdir /mnt/cdrom /mnt/floppy /mnt/usb
+chown root:chopstix /mnt/cdrom /mnt/floppy /mnt/usb
+chmod 0775 /mnt/cdrom /mnt/floppy /mnt/usb
+cat >>/etc/fstab <<__EOT
+/dev/cd0a /mnt/cdrom cd9660 ro,noauto,nodev,noexec,nosuid 0 0
+/dev/fd0a /mnt/floppy msdos rw,noauto,nodev,noexec,nosuid,-l 0 0
+/dev/sd0i /mnt/usb msdos rw,noauto,nodev,noexec,nosuid 0 0
+__EOT
+
+# Update ld.so.hints
+ldconfig /usr/X11R6/lib /usr/local/lib
+
+# Packages
+PKG_PATH=ftp://download.manorsoft.ca/pub/OpenBSD/%%OSREV%%/packages/i386
+mount /mnt/cdrom && PKG_PATH=/mnt/cdrom/%%OSREV%%/packages/i386
+export PKG_PATH
+pkg_add -i cyrus-sasl sqlite3 \
+	chopstix-${VER} chopstix-menu-${VER} chopstix-report-${VER} \
+	chopstix-desktop-${VER} \
+	matchbox-window-manager matchbox-desktop matchbox-panel \
+	rxvt jmk-fonts terminus-font \
+	nano vim rsync konqueror leafpad mod_auth_bsd \
+	apsfilter ghostscript
+
+# Enable mod_auth_bsd
+/usr/local/sbin/mod_auth_bsd-enable
+
+# Update font directories
+/usr/X11R6/bin/mkfontdir /usr/local/lib/X11/fonts/jmk
+/usr/X11R6/bin/mkfontdir /usr/local/lib/X11/fonts/terminus
+/usr/X11R6/bin/mkfontdir /usr/local/lib/X11/fonts/ghostscript

@@ -1,0 +1,18 @@
+#	$Gateweaver: printcap,v 1.1 2007/09/06 19:33:21 cmaxwell Exp $
+#	$OpenBSD: printcap,v 1.4 2003/03/28 21:32:30 jmc Exp $
+
+lp|local receipt printer:\
+	:lp=/dev/lp:\
+	:sd=/var/spool/output:\
+	:sh:\
+	:lf=/var/log/lpd-errs:
+
+lpcopy|local receipt printer plus copy:\
+	:lp=/dev/lp:\
+	:sd=/var/spool/output:\
+	:sh:\
+	:if=/etc/printcap_copy:\
+	:lf=/var/log/lpd-errs:
+
+#rp|remote line printer:\
+#	:lp=:rm=printhost:rp=lp:sd=/var/spool/output:lf=/var/log/lpd-errs:

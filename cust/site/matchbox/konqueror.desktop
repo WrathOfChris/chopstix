@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Web Browser
+Comment=A Web Browser
+Exec=konq-e
+Icon=mbnoapp.png
+Type=Application
+MimeType=text/html
+Categories=Applications

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- $Gateweaver: payment.html,v 1.3 2007/09/12 17:08:45 cmaxwell Exp $ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>%%TITLE%%</title>
+	<link rel="stylesheet" type="text/css" href="%%BASECSS%%" />
+</head>
+
+<div id="main">
+%%HEADER%%
+
+<div class="outer"><div class="inner"><div class="float-wrap"><div id="content">
+<h2>Payments %%TIMESTART%% - %%TIMESTOP%%</h2>
+<table class="list">
+	<tr><th scope="row"><b>Orders</b></th><td>%%PAYCOUNT%%</td></tr>
+	<tr><th scope="row"><b>Subtotal</b></th><td>%%PAYSUBTOTAL%%</td></tr>
+	<tr><th scope="row"><b>Discount</b></th><td>%%PAYDISCOUNT%%</td></tr>
+	<tr><th scope="row"><b>Delivery</b></th><td>%%PAYDELIVERY%%</td></tr>
+	<tr><th scope="row"><b>Credit</b></th><td>%%PAYCREDIT%%</td></tr>
+	<tr><th scope="row"><b>Tax1</b></th><td>%%PAYTAX1%%</td></tr>
+	<tr><th scope="row"><b>Tax2</b></th><td>%%PAYTAX2%%</td></tr>
+	<tr><th scope="row"><b>Total</b></th><td>%%PAYTOTAL%%</td></tr>
+</table>
+
+<table class="list">
+	<tr><th scope="col"><b>Method</b></th>
+		<th scope="col"><b>Payments</b></th>
+		<th scope="col"><b>Total</b></th></tr>
+	<tr><td><b>Cash</b></td>
+		<td>%%PAYCOUNTCASH%%</td><td>%%PAYTOTALCASH%%</td></tr>
+	<tr><td><b>Credit</b></td>
+		<td>%%PAYCOUNTCREDIT%%</td><td>%%PAYTOTALCREDIT%%</td></tr>
+	<tr><td><b>Debit</b></td>
+		<td>%%PAYCOUNTDEBIT%%</td><td>%%PAYTOTALDEBIT%%</td></tr>
+	<tr><td><b>Void</b></td>
+		<td>%%PAYCOUNTVOID%%</td><td>%%PAYTOTALVOID%%</td></tr>
+</table>
+</div></div></div></div>
+</div>
+
+%%FOOTER%%
+
+</body>
+</html>

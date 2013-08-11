@@ -1,0 +1,4 @@
+@comment $OpenBSD$
+%%SHARED%%
+bin/chopstix
+@man man/cat3/chopstix_sql.0

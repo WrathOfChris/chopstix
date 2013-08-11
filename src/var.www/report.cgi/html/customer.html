@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- $Gateweaver: customer.html,v 1.3 2007/09/13 14:57:04 cmaxwell Exp $ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>%%TITLE%%</title>
+	<link rel="stylesheet" type="text/css" href="%%BASECSS%%" />
+</head>
+
+<body>
+
+<div id="main">
+%%HEADER%%
+
+<div class="outer"><div class="inner"><div class="float-wrap"><div id="content">
+<h2>Customers %%TIMESTART%% - %%TIMESTOP%%</h2>
+<table class="list">
+
+<tr>
+	<th scope="col"><b>Phone</b></th>
+	<th scope="col"><b>Name</b></th>
+	<th scope="col"><b>Address</b></th>
+	<th scope="col"><b>Orders</b></th>
+	<th scope="col"><b>Total</b></th>
+</tr>
+
+%%ROWRESET%%
+%%CUSTLIST%%
+
+</table>
+</div></div></div></div>
+</div>
+
+%%FOOTER%%
+
+</body>
+</html>
+

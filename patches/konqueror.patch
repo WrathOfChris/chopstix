@@ -1,0 +1,36 @@
+--- konq-embed/kdesrc/kio/http/http.cc.orig	Sat Jan 21 06:49:34 2006
++++ konq-embed/kdesrc/kio/http/http.cc	Sat Sep 29 16:21:07 2007
+@@ -3882,7 +3882,7 @@
+   // m_bufPOST will NOT be empty iff authentication was required before posting
+   // the data OR a re-connect is requested from ::readHeader because the
+   // connection was lost for some reason.
+-  if ( !m_bufPOST.isNull() )
++  if ( !m_bufPOST.isEmpty() )
+   {
+     kdDebug(7113) << "(" << m_pid << ") POST'ing saved data..." << endl;
+ 
+@@ -3895,11 +3895,13 @@
+ 
+     QByteArray buffer;
+     int old_size;
++    int oerrno = errno;
+ 
+     m_bufPOST.resize(0);
+     do
+     {
+       dataReq(); // Request for data
++      errno = 0;
+       result = readData( buffer );
+       if ( result > 0 )
+       {
+@@ -3909,7 +3911,9 @@
+         memcpy( m_bufPOST.data()+ old_size, buffer.data(), buffer.size() );
+         buffer.resize(0);
+       }
+-    } while ( result > 0 );
++    } while ( result > 0 ||
++			(result == -1 && (errno == EINTR || errno == EAGAIN)));
++    errno = oerrno;
+   }
+ 
+   if ( result < 0 )

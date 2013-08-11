@@ -1,0 +1,59 @@
+<form method="post" action="%%BASEURL%%?action=editpost">
+	<input type="hidden" name="sid" value="%%SID%%">
+	<input type="hidden" name="mode" value="%%MODE%%">
+	<input type="hidden" name="thres" value="%%THRES%%">
+	<input type="hidden" name="edit" value="1">
+	<input type="hidden" name="submission" value="%%SUBMISSION%%">
+	<br />
+
+	<p><h4>Subject</h4>
+	<input type="text" name="subject" value="%%SUBJECT%%" size="60"></p>
+
+	<p><h4>Contributed by (will be replaced with your user name when saved)</h4>
+	<input type="text" name="name" value="%%NAME%%" size="60"></p>
+
+	<p><h4>Email address (optional, not currently shown)</h4>
+	<input type="text" name="email" value="%%EMAIL%%" size="60"></p>
+
+	<p><h4>Web page (optional, editor's own page)</h4>
+	<input type="text" name="href" value="%%HREF%%" size="60"></p>
+
+	<p><h4>Department (make up something witty)</h4>
+	<input type="text" name="dept" value="%%DEPT%%" size="60"></p>
+
+	<p><h4>Topic</h4>
+	<select name="topic">
+		<option value="topic11" %%SELECTED_TOPIC_topic11%%>1.1
+		<option value="topicaskmanorsoft" %%SELECTED_TOPIC_topicaskmanorsoft%%>Ask
+		<option value="topicblog" %%SELECTED_TOPIC_topicblog%%>Blog
+		<option value="topiceditorial" %%SELECTED_TOPIC_topiceditorial%%>Editorial
+		<option value="topichardware" %%SELECTED_TOPIC_topichardware%%>Hardware
+		<option value="topicnetworking" %%SELECTED_TOPIC_topicnetworking%%>Internet
+		<option value="topicnews" %%SELECTED_TOPIC_topicnews%%>News
+		<option value="topicopenbsd" %%SELECTED_TOPIC_topicopenbsd%%>OpenBSD
+		<option value="topicopenssh" %%SELECTED_TOPIC_topicopenssh%%>OpenSSH
+		<option value="topicreadme" %%SELECTED_TOPIC_topicreadme%%>Readme
+		<option value="topicsecurity" %%SELECTED_TOPIC_topicsecurity%%>Security
+		<option value="topicsysadmin" %%SELECTED_TOPIC_topicsysadmin%%>SysAdmin
+	</select></p>
+
+	<p><h4>Poll</h4>
+	<input type="checkbox" name="poll" value="yes" %%CHECKED_POLL%%>
+	<small>(for polls, use one line of front text for each choice, check for
+	trailing newlines, preview is slightly broken still, save)</small></p>
+
+	<p><h4>Front Text</h4>
+	<textarea name="data" cols="90" rows="20">%%DATA%%</textarea></p>
+
+	<p><h4>More Text</h4>
+	<textarea name="more" cols="90" rows="20">%%MORE%%</textarea></p>
+
+	<p><h4>Delayed Publication</h4>
+	Delayed publication time (either <b>YYYYMMDDhhmmss</b> (in GMT), or <b>+m</b> for "m minutes from now", leave empty for no delay)<br>
+	<input type="text" name="pubdate" value="%%PUBDATE%%" size="14"></p>
+
+	<br />
+	<br />
+	<p><input type="submit" name="preview" value="Preview">
+	<input type="submit" name="submit" value="Save"></p>
+</form>

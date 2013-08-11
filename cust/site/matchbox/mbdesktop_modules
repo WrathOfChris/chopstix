@@ -1,0 +1,8 @@
+# $Gateweaver: mbdesktop_modules,v 1.1 2007/09/08 17:48:45 cmaxwell Exp $
+#
+# This file lists the 'plug-ins' with any arguments to be loaded by
+# matchbox-desktop. 
+
+/usr/local/lib/matchbox/desktop/tasks.so
+/usr/local/lib/matchbox/desktop/dotdesktop.so
+#/usr/local/lib/matchbox/desktop/simplefilebrowser.so /home/chopstix/.matchbox/browse/

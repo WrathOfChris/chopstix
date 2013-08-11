@@ -1,0 +1,7 @@
+[General]
+ShowLocationBar=true
+ShowStatusBar=true
+ZoomFactor=100
+HomeURL=http://%%HOSTNAME%%
+[Notification Messages]
+WarnOnUnencryptedForm=true

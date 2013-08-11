@@ -1,0 +1,9 @@
+To finish the install of menu:
+
+ScriptAlias /chopstix/menu.cgi "/var/www/chopstix/menu/menu.cgi"
+<Directory "/var/www/chopstix/menu">
+	Options ExecCGI
+	AllowOverride AuthConfig
+	Order allow,deny
+	Allow from all
+</Directory>

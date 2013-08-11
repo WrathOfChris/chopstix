@@ -1,0 +1,13 @@
+<form action="%%BASEURL%%?action=editsubitem" method="post">
+<input type="hidden" name="menucode" value="%%ITEMCODE%%" />
+<input type="hidden" name="menugen" value="%%ITEMGEN%%" />
+<input type="hidden" name="subitemqtyold" value="%%ITEMEXTRAQTY%%" />
+<input type="hidden" name="subitemcodeold" value="%%ITEMEXTRACODE%%" />
+<tr>
+	<td><input type="text" name="subitemqtynew" value="%%ITEMEXTRAQTY%%" size="3" /></td>
+	<td><input type="text" name="subitemcodenew" value="%%ITEMEXTRACODE%%" size="6" /></td>
+	<td><b>%%ITEMEXTRANAME%%</b></td>
+	<td><input type="submit" name="cmd" value="Change" />
+		<input type="submit" name="cmd" value="Delete" /></td>
+</tr>
+</form>

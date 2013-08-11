@@ -1,0 +1,5247 @@
+#LyX 1.4.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 245
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+\usepackage{ae,aecompl}
+\def\RCS$#1: #2 ${\expandafter\def\csname RCS#1\endcsname{#2}}
+\RCS$Revision: 1.13 $
+\RCS$Date: 2007/10/07 22:59:14 $
+\RCS$Author: cmaxwell $
+\def\REP$#1: #2 ${\expandafter\def\csname REP#1\endcsname{#2}}
+\REP$Chopstix: Chopstix 1.1 $
+\REP$ChopstixVer: 1.1 $
+\REP$OpenBSD: OpenBSD 4.2 $
+\REP$ManorWeb: www.manorsoft.ca $
+\REP$ManorEmail: manorsoft.ca $
+\REP$ManorPhone: (905) 000-0000 $
+\REP$ManorFax: (905) 000-0000 $
+\end_preamble
+\language english
+\inputencoding auto
+\fontscheme default
+\graphics default
+\float_placement !tbph
+\paperfontsize default
+\spacing single
+\papersize custom
+\use_geometry true
+\use_amsmath 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\paperwidth 7in
+\paperheight 9in
+\leftmargin 0.5in
+\topmargin 0.5in
+\rightmargin 0.5in
+\bottommargin 0.5in
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset Graphics
+	filename /home/cmaxwell/chopstix/doc/ChopstixLogo.gif
+
+\end_inset
+
+
+\newline
+User Guide
+\end_layout
+
+\begin_layout Date
+2007
+\end_layout
+
+\begin_layout Publishers
+Manorsoft
+\newline
+Nowhere, Ontario
+\end_layout
+
+\begin_layout Subsubsection*
+\begin_inset VSpace vfill
+\end_inset
+
+Copyright Notice
+\end_layout
+
+\begin_layout Standard
+Copyright (c) 2007 Manorsoft.
+ 
+\newline
+All rights reserved.
+\end_layout
+
+\begin_layout Subsubsection*
+Notice
+\end_layout
+
+\begin_layout Standard
+The software described in this book is furnished under a licence agreement
+ and may only be used in accordance with the terms of the agreement.
+ Any other use is prohibited.
+\end_layout
+
+\begin_layout Subsubsection*
+Trademarks
+\end_layout
+
+\begin_layout Standard
+Product names mentioned in this book may be trademarks or registered trademarks
+ of their respective companies and are hereby acknowledged.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Document Information
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\align left
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features>
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Version:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPChopstix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Updated:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+RCSDate
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+By:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+RCSAuthor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Revision:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+RCSRevision
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Manorsoft
+\end_layout
+
+\begin_layout Address
+No longer active
+\newline
+Nowhere, Ontario
+\newline
+H0H 0H0
+\newline
+http://
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPManorWeb
+\end_layout
+
+\end_inset
+
+
+\newline
+Tel: 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPManorPhone
+\end_layout
+
+\end_inset
+
+
+\newline
+Email: info@
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPManorEmail
+\end_layout
+
+\end_inset
+
+
+\newpage
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand \tableofcontents{}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Addchap
+Welcome
+\end_layout
+
+\begin_layout Standard
+Hello and welcome to Chopstix.
+ You're about to improve your food service take-out and delivery business
+ by switching to a simple, fast and functional order processing system.
+\end_layout
+
+\begin_layout Standard
+This book is for anyone who uses Chopstix, whether you're just beginning,
+ have some technical experience, or have lots of expertise.
+ It contains all the information you need to use Chopstix effectively, from
+ the basics to special circumstances and advanced usage.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Part 1: Orders and Receipts
+\begin_inset Quotes erd
+\end_inset
+
+ walks you through the basics of the Chopstix main terminal screen.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Part 2: Administration
+\begin_inset Quotes erd
+\end_inset
+
+ discusses the administrative functions provided by Chopstix.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Part 3: Appendices
+\begin_inset Quotes erd
+\end_inset
+
+ describes keyboard hotkeys, terms used within this book, and technical
+ support information.
+\end_layout
+
+\begin_layout Section*
+Document Conventions
+\end_layout
+
+\begin_layout Standard
+You'll find this book easy to use if you look for these simple conventions:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Boldface
+\series default
+ 
+\series bold
+type
+\series default
+ indicates the name of an item you need to select.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Italics type
+\shape italic
+\emph default
+ 
+\shape default
+indicates new terms, book titles, or variable information that must be replaced
+ by an actual value.
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+Monospace type
+\family default
+ indicates an example (such as a fictitious name, or address) or text that
+ is displayed on the screen.
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+\series bold
+Bold Monospace type
+\family default
+ 
+\series default
+indicates text entered on the keyboard in response to a question displayed
+ on the screen.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+<angle brackets, bold>
+\series default
+ indicates a function key or key combination on the keyboard.
+ For example 
+\series bold
+<CTRL-P>
+\series default
+ means hold down the CTRL key while pressing 'P'.
+\end_layout
+
+\begin_layout Section*
+About Chopstix
+\end_layout
+
+\begin_layout Standard
+Chopstix is a software program that can be used to improve your business
+ by handling the entire order and delivery process from telephone number
+ to customer and kitchen receipt.
+ Chopstix is designed to simplify your order process, improve your customer
+ relationships, and assist in reconciling multiple payment methods tendered
+ by your customers.
+\end_layout
+
+\begin_layout Section*
+What's New?
+\end_layout
+
+\begin_layout Standard
+Everything.
+ Chopstix has been in production continuously since December 2005, but this
+ is the first release available to the public.
+ Some highlights include:
+\end_layout
+
+\begin_layout Itemize
+Customer database searchable by telephone number that contains not only
+ name and address but preserves special instructions between orders.
+\end_layout
+
+\begin_layout Itemize
+Order entry from your own menu with real time updates of the order total.
+\end_layout
+
+\begin_layout Itemize
+Order database that preserves all posted orders including customer, individual
+ items, and special instructions.
+\end_layout
+
+\begin_layout Itemize
+Menu system capable of attaching styles, extra items, and sub items for
+ combos.
+\end_layout
+
+\begin_layout Itemize
+Receipts printed in a two column format that can be split for kitchen and
+ customer receipt at order time.
+\end_layout
+
+\begin_layout Itemize
+Complaint and Credit system that allows you to handle complaints by applying
+ a future order credit to a customer account.
+\end_layout
+
+\begin_layout Itemize
+Persistent Special Instructions can be stored by customer and print on all
+ current and future orders.
+\end_layout
+
+\begin_layout Chapter
+Before You Begin
+\end_layout
+
+\begin_layout Standard
+Before using Chopstix, you should have your point of sale terminal computer
+ set up and running with a standard 
+\emph on
+Site Installation
+\emph default
+ provided by Manorsoft.
+ The 
+\emph on
+Site Installation
+\emph default
+ will install the operating system and configure your terminal for use with
+ Chopstix.
+ All examples and instructions in this book are based on this standard configura
+tion.
+ For additional information on site installations please consult the 
+\emph on
+Chopstix Installation Guide
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+This chapter describes the hardware and software requirements necessary
+ to run Chopstix and a brief overview of how to launch Chopstix on your
+ terminal.
+\end_layout
+
+\begin_layout Section
+System Requirements
+\end_layout
+
+\begin_layout Subsection*
+Computer
+\begin_inset LatexCommand \index{Requirements, Computer}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Chopstix program runs on the free, functional & secure operating system
+ OpenBSD.
+ Designed to operate with minimal hardware requirements, Chopstix will run
+ on most personal and server computers.
+ The minimum recommended hardware requirements are as follows.
+\end_layout
+
+\begin_layout Itemize
+300MHz processor
+\end_layout
+
+\begin_layout Itemize
+64MB RAM
+\end_layout
+
+\begin_layout Itemize
+6GB Hard Disk
+\end_layout
+
+\begin_layout Standard
+For your consideration, one Chopstix developer uses Chopstix regularly on
+ a 400MHz processor with 128MB of RAM.
+\end_layout
+
+\begin_layout Standard
+For more information on OpenBSD compatible hardware please see the 
+\begin_inset LatexCommand \htmlurl[OpenBSD Hardware Compatibility List:]{http://www.openbsd.org/i386.html}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Printer
+\begin_inset LatexCommand \index{Requirements, Printer}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Chopstix has simple requirements when it comes to printers: any continuous
+ feed printer capable of printing Epson FX control codes.
+ This will include most modern impact printers.
+ The printer should be connected to the parallel port of your terminal computer.
+\end_layout
+
+\begin_layout Subsection*
+Modem
+\begin_inset LatexCommand \index{Requirements, Modem}
+
+\end_inset
+
+ or Network
+\begin_inset LatexCommand \index{Requirements, Network}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Some administrative features of Chopstix may require a modem or network
+ connection to operate.
+ If a modem is being used, it must be an hardware modem (ie.
+ not a Softmodem or Winmodem).
+\end_layout
+
+\begin_layout Subsection*
+Packages
+\begin_inset LatexCommand \index{Requirements, Packages}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Some administrative features of Chopstix are accessed through a web browser.
+ The default browser installed in a site installation is the konquerer embedded
+ browser.
+\end_layout
+
+\begin_layout Section
+Starting Chopstix
+\end_layout
+
+\begin_layout Subsection*
+Logging In
+\begin_inset LatexCommand \index{Logging In}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+width "50col%"
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixLoginBlank.png
+	lyxscale 50
+	width 3in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Chopstix-login-screen}
+
+\end_inset
+
+Chopstix terminal login screen
+\end_layout
+
+\end_inset
+
+Once your terminal has successfully finished starting up, you will be presented
+ with a login screen similar to the one shown in figure 
+\begin_inset LatexCommand \ref{fig:Chopstix-login-screen}
+
+\end_inset
+
+.
+ From this screen you may login to the terminal system as any configured
+ user.
+ Here we are going to login as the 
+\series bold
+chopstix
+\series default
+ user.
+\end_layout
+
+\begin_layout Standard
+Your cursor will be to the right of the 
+\family typewriter
+Login
+\family default
+: prompt where you may type 
+\series bold
+order
+\series default
+ and press 
+\series bold
+<Enter>
+\series default
+.
+ The cursor will now have moved down to the right of the 
+\family typewriter
+Password
+\family default
+: prompt where you may now type your 
+\series bold
+password
+\series default
+ and again press 
+\series bold
+<Enter>
+\series default
+.
+ The password will not display while you are typing.
+\end_layout
+
+\begin_layout Standard
+The initial password for the order account is located in your 
+\emph on
+Licence Package
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection*
+Launching Chopstix
+\begin_inset LatexCommand \index{Launching Chopstix}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixDesktopMenu.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Chopstix Desktop
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Once you have logged in, you will be presented with the system desktop.
+ Use either your mouse or keyboard and select 
+\series bold
+Chopstix
+\series default
+ from the desktop to start the Chopstix program.
+\end_layout
+
+\begin_layout Part
+Orders and Receipts
+\end_layout
+
+\begin_layout Chapter
+The Basics
+\end_layout
+
+\begin_layout Section
+Navigation
+\begin_inset LatexCommand \index{Navigation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Navigation within the Chopstix screen is accomplished using only the keyboard.
+ Movement between fields uses the arrow, tab and enter keys.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<Up>,<Down>
+\series default
+ Move the cursor to between fields without saving any changes.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<Left>,<Right>
+\series default
+ Move the cursor within the current field.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<Tab>,<Enter> 
+\series default
+Move the cursor to the next field and store changes.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<PgUp>,<PgDn>
+\series default
+ Scroll the order entry section.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F1>
+\series default
+ Display navigation help.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F2>
+\series default
+ Recall customer last order.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F3>
+\series default
+ Recall last posted order.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F4>
+\series default
+ Change customer telephone number.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F5>
+\series default
+ Display daily totals.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F7>
+\series default
+ New order.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F8>
+\series default
+ Re-Print order
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F10>
+\series default
+ Open Credit/Complaint window.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F11>
+\series default
+ Open Discount window.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F12>
+\series default
+ Open Delivery window.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<Ins>,<Del>
+\series default
+ Insert or Delete per-item special instructions.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<CTRL-L>
+\series default
+ Refresh screen, and clear status line.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<CTRL-P>
+\series default
+ Post order immediately
+\end_layout
+
+\begin_layout Section
+Main Screen
+\end_layout
+
+\begin_layout Standard
+The screen shown in figure 
+\begin_inset LatexCommand \ref{fig:Chopstix-main-screen}
+
+\end_inset
+
+ illustrates the primary features of Chopstix.
+ The screen is split between 
+\emph on
+Customer Details
+\emph default
+, an 
+\emph on
+Order Entry
+\emph default
+ section, and the 
+\emph on
+Payment Details
+\emph default
+ section.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixCompleteLabelled.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Chopstix-main-screen}
+
+\end_inset
+
+Chopstix main screen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Your First Order
+\end_layout
+
+\begin_layout Standard
+To illustrate the main features of Chopstix, you are going to complete the
+ entire order process, from creating a new customer to entering menu items
+ to posting the order and printing a receipt.
+\end_layout
+
+\begin_layout Subsection
+Customer
+\end_layout
+
+\begin_layout Description
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features>
+<column alignment="right" valignment="top" leftline="true" width="0">
+<column alignment="left" valignment="top" rightline="true" width="0">
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+You:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Thank you for calling New Cuisine, may I have your telephone number?
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Cust:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Area code 905, 555, 1000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+You:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+This is your first order, may I have your name and address?
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixEmptyCustomer.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Customer-details-section}
+
+\end_inset
+
+Customer details section
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The only step to creating a new customer is to enter a customer phone number.
+ In the 
+\series bold
+Phone Number
+\series default
+ field type:
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+Phone Number: 
+\series bold
+905 555 1000
+\end_layout
+
+\begin_layout Standard
+When you press the 
+\series bold
+<Enter>
+\series default
+ or 
+\series bold
+<Tab> 
+\series default
+keys, your cursor will automatically move to the next field.
+ You may also have noticed that the 
+\series bold
+Reps
+\series default
+ field counted and displayed the number of repeat orders by this customer.
+ As this is a new customer, there are 
+\series bold
+0
+\series default
+ repeats.
+ Complete the rest of the customer details:
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+Name: 
+\series bold
+John Smith
+\series default
+
+\newline
+Address: 
+\series bold
+123 Fake Street
+\series default
+
+\newline
+Apt: 
+\series bold
+701
+\series default
+
+\newline
+Entry: 
+\series bold
+1234
+\series default
+
+\newline
+Main Intersection: 
+\series bold
+Main & Fake
+\end_layout
+
+\begin_layout Standard
+Now your cursor should be in the 
+\series bold
+Deliver To
+\series default
+ field waiting for the customer to choose a delivery method.
+ 
+\series bold
+John
+\series default
+ 
+\series bold
+Smith
+\series default
+ does not want to drive today and chooses delivery, so press the 
+\series bold
+<D>
+\series default
+ key.
+ Chopstix added the full text 
+\series bold
+DELIVERY
+\series default
+ to the field and moved your cursor to the order entry section.
+\end_layout
+
+\begin_layout Subsection
+Order
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features>
+<column alignment="right" valignment="top" leftline="true" width="0">
+<column alignment="left" valignment="top" rightline="true" width="0">
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+You:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+May I take your order?
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Cust:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+I would like 2 of number 111
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixEmptyOrder.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Order-entry-section}
+
+\end_inset
+
+Order entry section
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Your cursor should now be positioned in the order entry section.
+ Your customer seems to have a copy of your menu as he asked for a specific
+ menu item by code.
+ Once you have entered the 
+\series bold
+Qty
+\series default
+ and 
+\series bold
+Code
+\series default
+, both the 
+\series bold
+Description
+\series default
+ and the 
+\series bold
+Price
+\series default
+ are retrieved from your menu and displayed on the screen.
+ Your cursor has been moved to the next line ready for the next item.
+\end_layout
+
+\begin_layout Standard
+Press 
+\series bold
+<Tab>
+\series default
+, or 
+\series bold
+<Enter>
+\series default
+ twice to move on to payment.
+\end_layout
+
+\begin_layout Subsection
+Payment
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features>
+<column alignment="right" valignment="top" leftline="true" width="0">
+<column alignment="left" valignment="top" rightline="true" width="0">
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Cust:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+I have a peanut allergy, please do not use peanut oil.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+You:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Your total comes to $11.97, will that be cash or credit?
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Cust:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Credit card number 1111 2222 3333 expiry 11/22
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+You:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Thank you, your order will be delivered shortly.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixEmptyPayment.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Payment-details-section}
+
+\end_inset
+
+Payment details section
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Your customer has given you special cooking instructions, enter them now.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+Special Instructions: 
+\series bold
+Peanut allergy!
+\end_layout
+
+\begin_layout Standard
+Once you finish entering special instructions, they are stored along with
+ the customer details.
+ The next time the customer orders, they will be pre-entered.
+\end_layout
+
+\begin_layout Standard
+Enter the customer payment details starting with the payment type 
+\series bold
+CC
+\series default
+ for credit card, then the number and expiry.
+ These will be printed on the receipt.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+CC# 
+\series bold
+1111 2222 3333
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+EXP 
+\series bold
+11/22
+\end_layout
+
+\begin_layout Standard
+Your first order has been posted.
+ The status line indicates the order number being printed, and on the line
+ between the customer and order section the order number, date and time
+ are displayed like this: 
+\series bold
+[15/2007-08-16 16:14:08]
+\series default
+.
+ The cash helper window is provided to assist with split payments.
+ Press 
+\series bold
+<Enter>
+\series default
+ twice and Chopstix resets to take another order.
+ Your first receipt has been queued for printing and should now be finished
+ printing.
+\end_layout
+
+\begin_layout Subsection
+Receipt
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReceiptSimple.png
+	keepAspectRatio
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Your-first-receipt}
+
+\end_inset
+
+Your first receipt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Look to your printer and you should see a receipt being printed similar
+ to the one shown in figure 
+\begin_inset LatexCommand \ref{fig:Your-first-receipt}
+
+\end_inset
+
+.
+ Tear the receipt in two and send the first portion to your kitchen, while
+ the second is sent to your prep area.
+\end_layout
+
+\begin_layout Standard
+The first portion of the receipt prints your business name, telephone number,
+ and address, followed by the date ordered, delivery method and order number.
+ Use this information to package customer orders in the correct order and
+ ensure receipts from previous days do not get mixed in.
+\end_layout
+
+\begin_layout Standard
+The next portion of the receipt prints the customer name and address details
+ including the exact time the order was posted.
+ Use this time to ensure orders are delivered in a timely manner.
+\end_layout
+
+\begin_layout Standard
+The order portion prints all the ordered items including the price.
+ The code is also printed since one of the receipts will be used by the
+ kitchen to cook the food.
+\end_layout
+
+\begin_layout Standard
+The extras portion prints special 
+\emph on
+Item Extras
+\emph default
+ that have been attached to regular menu items.
+ In our example, the 
+\series bold
+Chicken Fried Rice
+\series default
+ had an 
+\emph on
+Item Extra
+\emph default
+ of number 
+\series bold
+600 Soy Sauce 
+\series default
+attached which is printed here.
+\end_layout
+
+\begin_layout Standard
+The final portion of the receipt contains the special instructions the customer
+ requested followed by totals and applicable taxes.
+ The Canadian tax 
+\series bold
+GST
+\series default
+ requires printing of the business tax number on all receipts and is printed
+ here.
+\end_layout
+
+\begin_layout Standard
+That's it.
+ Get back to work!
+\end_layout
+
+\begin_layout Chapter
+Customers
+\end_layout
+
+\begin_layout Section
+Customer Database
+\end_layout
+
+\begin_layout Standard
+Chopstix includes a complete customer storage and retrieval system to simplify
+ your order process and improve your record keeping.
+ Using only the telephone number, Chopstix will retrieve all previously
+ entered customer details such as name, address and order history.
+ 
+\end_layout
+
+\begin_layout Standard
+Entering customer details is easy.
+ Simply type information into the customer detail fields onscreen and press
+ 
+\series bold
+<Tab>
+\series default
+ or 
+\series bold
+<Enter>
+\series default
+.
+ Each time you store a detail, the customer record is updated in the database.
+ No saving or lost details.
+\end_layout
+
+\begin_layout Standard
+Creating a new customer is easy, simply enter a new telephone number and
+ a new customer detail record is created.
+ Just fill out the details and the customer is entered into your database.
+\end_layout
+
+\begin_layout Standard
+The next time the customer orders, simply enter the telephone number and
+ all details are retrieved ready to be printed on the receipt.
+\end_layout
+
+\begin_layout Section
+Telephone Extension
+\end_layout
+
+\begin_layout Standard
+For corporate clients with telephone extension numbers, Chopstix is able
+ to store the extension alongside the main telephone number.
+ The extension is stored as a customer detail, which means you do not need
+ to know the extension when the customer next orders.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixPhoneExtension.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Phone-number-extension}
+
+\end_inset
+
+Phone number extension
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To enter an extension, move to the 
+\family typewriter
+Phone
+\series bold
+ 
+\series default
+Number
+\series bold
+:
+\family default
+\series default
+ field and enter the customer phone number followed by optionally pressing
+ 
+\series bold
+'x'
+\series default
+ and entering the extension number.
+\end_layout
+
+\begin_layout Section
+Delivery
+\end_layout
+
+\begin_layout Standard
+Chopstix contains many features specifically designed to assist with your
+ delivery orders.
+ These extra details are stored in the customer database and are retrieved
+ with the customer record.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixDelivery.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Delivery-details}
+
+\end_inset
+
+Delivery details
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Apartment Number
+\end_layout
+
+\begin_layout Standard
+The apartment or unit number is entered separately from the address so it
+ can be clearly printed on the receipt.
+ Having the unit separate is easier to read and prevents the number from
+ being lost in the address line.
+\end_layout
+
+\begin_layout Subsection
+Building Entry
+\end_layout
+
+\begin_layout Standard
+The building entry detail can store additional entry instructions, automatic
+ door entry codes, or room numbers for corporate orders.
+ The entry code is printed separately on the receipt.
+\end_layout
+
+\begin_layout Subsection
+Main Intersection
+\end_layout
+
+\begin_layout Standard
+Enter the closest intersection, major landmarks, driving directions or complex
+ delivery instructions to assist in delivering your orders.
+ 
+\end_layout
+
+\begin_layout Subsection
+Deliver To
+\end_layout
+
+\begin_layout Standard
+Chopstix offers a selection of the following order fulfillment methods:
+\end_layout
+
+\begin_layout Description
+Pickup The order was phoned in, but the customer will pick the order up.
+\end_layout
+
+\begin_layout Description
+Delivery The order will be delivered to the customer address.
+\end_layout
+
+\begin_layout Description
+Walkin The customer ordered onsite and will wait or return to pick the order
+ up.
+\end_layout
+
+\begin_layout Description
+Void For details, see 
+\emph on
+Void Delivery
+\emph default
+ in chapter 
+\begin_inset LatexCommand \vref{sec:Void-Delivery}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Without a custom business rules module, the delivery choices are used to
+ categorize orders within the order database and for printing on the receipt.
+ Custom business rules are able to use this choice to enable additional
+ actions such as automatic delivery charges or discounts for walk-in customers.
+\end_layout
+
+\begin_layout Section
+Repeats
+\end_layout
+
+\begin_layout Standard
+The repeats feature counts the number of orders by this customer in the
+ order database.
+ This allows fast and easy identification of regular and loyal customers.
+ Use this count to reward loyal customers, or to identify new customers
+ for first order specials.
+ The repeat count is also printed on the receipt for you to use when cooking
+ or packing the order.
+\end_layout
+
+\begin_layout Section
+Special Instructions
+\end_layout
+
+\begin_layout Standard
+Located in the payment portion of the main screen since many special requests
+ happen late in the order process, special instructions allow you to handle
+ all sorts of customer requests.
+ The text of the special instruction will be printed on both the kitchen
+ and customer receipts.
+ Use special instructions to remember customer preferences for cooking time,
+ spicing, favourite flavours, allergies or diet restrictions.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixSpecialInstruction.png
+	lyxscale 75
+	width 6in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Special-Instructions}
+
+\end_inset
+
+Special Instructions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Once a special instruction is entered, it is stored in the customer database
+ and will be retrieved with the customer record.
+ Chopstix helps you by remembering your customer requests for you.
+ 
+\end_layout
+
+\begin_layout Standard
+When you post an order with a special instruction, the text of the instruction
+ is stored alongside the order.
+ When you view the order at a later date, you will see special instructions
+ as they were written at the time of order regardless of changes that have
+ been made since.
+\end_layout
+
+\begin_layout Section
+Last Order Recall
+\end_layout
+
+\begin_layout Standard
+Press the 
+\series bold
+<F2>
+\series default
+ key to retrieve the last posted order for the current customer.
+ The order number, date and time of order will be displayed onscreen.
+ Each item from the original order is automatically entered into the current
+ order allowing an immediate repeat order or changes based on the last order.
+\end_layout
+
+\begin_layout Section
+Change Telephone Number
+\end_layout
+
+\begin_layout Standard
+The telephone number is the only customer detail that cannot be changed
+ directly from the main screen.
+ Entering a new number retrieves another customer record instead.
+ To change a customer telephone number, press the 
+\series bold
+<F4>
+\series default
+ key to open the 
+\family typewriter
+New Phone #
+\family default
+ window and enter the new telephone number.
+ The change is stored, and all details will now be retrieved with the new
+ number.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixNewPhone.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:New-phone-number}
+
+\end_inset
+
+New phone number window
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Complaints and Credits
+\end_layout
+
+\begin_layout Standard
+The Chopstix credit system is a powerful customer satisfaction tool that
+ can be used to turn an upset customer into a repeat customer.
+ When a customer has a complaint about an order, enter a credit to the customer
+ account.
+ Not only does the customer leave satisfied, you have avoided paying a refund,
+ and the customer will likely return.
+ 
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixComplaint.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Credit-window}
+
+\end_inset
+
+Credit window
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+An account with complaints displays a complaint counter on the screen when
+ the customer record is retrieved.
+ This is a simple visual cue that special care may be required.
+\end_layout
+
+\begin_layout Standard
+Credits are applied to all current and future orders until the credit balance
+ is exhausted.
+ The amount of credit remaining will be printed on the customer receipt.
+\end_layout
+
+\begin_layout Subsection
+Crediting an Account
+\end_layout
+
+\begin_layout Standard
+To open the credit window, press 
+\series bold
+<F10>
+\series default
+.
+ The credit window shows the total credit value applied to this account,
+ and how much credit remains.
+ To add a credit entry simply type the value of the credit and enter a reason
+ for the credit.
+ 
+\end_layout
+
+\begin_layout Standard
+Each credit entry is stored separately for future review, and multiple credit
+ entries are added together.
+ The text of the reason is stored with the credit as a helpful reminder
+ and is available in a report.
+\end_layout
+
+\begin_layout Subsection
+Applying Credit
+\end_layout
+
+\begin_layout Standard
+When a credit remains on an account, it will be automatically applied to
+ the current order up to the current subtotal value.
+ If the order is less than the credit value a credit balance will remain,
+ while if the order is greater than the credit the subtotal will reflect
+ the applied credit.
+\end_layout
+
+\begin_layout Standard
+Once an order with credit applied is posted, credit will be deducted from
+ each credit entry in order until either the remaining credit on each entry
+ is exhausted or the total credit applied is exhausted.
+\end_layout
+
+\begin_layout Subsection
+Displaying Credit
+\end_layout
+
+\begin_layout Standard
+Credits are represented on the order screen in the 
+\family typewriter
+Discount:
+\family default
+ payment line, which will be replaced with either 
+\family typewriter
+Credit
+\family default
+: when a credit is being applied or 
+\family typewriter
+Disc
+\family default
++Crd: when both a discount and credit are applied.
+ Credit is only applied against the value of order items, so an empty order
+ will not display any credit.
+\end_layout
+
+\begin_layout Standard
+Whenever a credit is applied, the amount of credit applied and the amount
+ of credit remaining on the account will be printed on the receipt.
+ See section 
+\begin_inset LatexCommand \vref{sub:Credit-Applied}
+
+\end_inset
+
+ for more detail.
+\end_layout
+
+\begin_layout Section
+Area Code Pre-Entry
+\end_layout
+
+\begin_layout Standard
+To speed entry of local telephone numbers or for areas without a ten digit
+ local dialing requirement, Chopstix can be configured to pre-enter the
+ local area code into the telephone number entry field.
+ The area code is entered as regular text, just as if you had typed it yourself
+ so if you need to enter a telephone number in another area code, just use
+ the 
+\series bold
+<Backspace>
+\series default
+ key as you normally would.
+\end_layout
+
+\begin_layout Standard
+To configure area code pre-entry see 
+\emph on
+Phone Prefix
+\emph default
+ in section 
+\begin_inset LatexCommand \vref{sub:Phone-Prefix}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Custom Customer Import
+\end_layout
+
+\begin_layout Standard
+Entering your customer details provides an excellent way to become comfortable
+ with Chopstix while transferring your customer list.
+ If your customer base is extremely large, your information is already stored
+ in an electronic format or you need assistance entering customer information,
+ Manorsoft has many options available.
+\end_layout
+
+\begin_layout Standard
+Contact us for details.
+\end_layout
+
+\begin_layout Chapter
+Orders
+\end_layout
+
+\begin_layout Section
+Order Database
+\end_layout
+
+\begin_layout Standard
+Chopstix includes a powerful order database to store and retrieve every
+ order printed or posted.
+ A posted order stores each individual item, any styles or per-item special
+ instructions and any price adjustment on combo subitems.
+ Individual totals are stored for each of subtotal, discount, delivery,
+ credit applied, taxes and the total.
+ Any customer special instructions are posted with the order to record the
+ instructions at the instant orderd.
+ Orders can be retrieved in full to present accurate information in case
+ of customer dispute or financial audit.
+\end_layout
+
+\begin_layout Section
+Order Items
+\end_layout
+
+\begin_layout Standard
+An order is constructed from individual order items added to the order.
+ Each order line contains a quantity of a single menu item.
+ As items are chosen, the order is expanded as required.
+ Up to four thousand items may be added to a single order.
+ Items are chosen by code from your menu.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixOrderItems.png
+	lyxscale 75
+	width 6in
+	keepAspectRatio
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Order items
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Per-Item Special Instructions
+\end_layout
+
+\begin_layout Standard
+Each order item may have special instruction attached to it that will be
+ printed on the receipt.
+ To insert instructions, press the 
+\series bold
+<Ins>
+\series default
+ key and the entry field will be expanded below the item description.
+ To delete an instruction from an item, press the 
+\series bold
+<Del>
+\series default
+ key and the field will be removed.
+ Per-item instructions will be stored with the order item when the order
+ is posted.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixOrderSpecial.png
+	lyxscale 75
+	width 6in
+	keepAspectRatio
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Order item with special instructions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Item Styles
+\end_layout
+
+\begin_layout Standard
+An item style is a manditory choice attached to an item.
+ When a menu item has one or more styles defined, a style choice entry is
+ presented as a hotkey field.
+ Once the quantity and code are entered, your cursor is moved to the selection
+ field with the first style selected.
+ To view available styles, press the 
+\series bold
+'?'
+\series default
+ key.
+ The style is chosen by typing enough letters from the name of the style
+ to distinguish it from other styles in the selection.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixOrderStyle.png
+	lyxscale 75
+	width 6in
+	keepAspectRatio
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Order item style choice
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For example, from the choices (
+\begin_inset Quotes eld
+\end_inset
+
+Honey Garlic
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Sweet & Sour
+\begin_inset Quotes erd
+\end_inset
+
+) only the single key 'h' or 's' need be pressed.
+ When style names are similar such as (
+\begin_inset Quotes eld
+\end_inset
+
+raw
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+rare
+\begin_inset Quotes erd
+\end_inset
+
+) additional keys must be pressed.
+\end_layout
+
+\begin_layout Standard
+The style choice is printed on the receipt, and stored when the order is
+ posted.
+ Styles may also be used as selectors for custom business rules.
+\end_layout
+
+\begin_layout Section
+Item Extras
+\end_layout
+
+\begin_layout Standard
+Item extras are additional unvalued items from your menu that are attached
+ to regular items and automatically added to the order receipt upon posting.
+ Each item extra will be printed in a section below the order items but
+ above the totals.
+\end_layout
+
+\begin_layout Standard
+Use item extras to include additional items such as condiment packets, cutlery,
+ wipes, side orders, or any other item that must be packed with the main
+ menu item.
+ Extras are not shown on the order screen.
+\end_layout
+
+\begin_layout Section
+Combos and Sub-Items
+\end_layout
+
+\begin_layout Standard
+Chopstix is capable of representing multiple item combinations through the
+ use of subitems.
+ A single main menu item contains the name and price of the combination,
+ while each subitem will be attached to the order upon selection.
+ Each subitem retains all the features of the regular menu item including
+ styles, extras, and per-item special instructions.
+ Subitem prices are not individually displayed.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixOrderCombo.png
+	lyxscale 75
+	width 6in
+	keepAspectRatio
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Order item combination
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Combo Item Override
+\end_layout
+
+\begin_layout Standard
+Each subitem that is part of a combination may have its quantity, its item
+ code, or both changed to override the original combination item.
+ The total price of the combination will not be affected, but each substitution
+ will be recorded in the order database once posted.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixOrderComboOverride.png
+	lyxscale 75
+	width 6in
+	keepAspectRatio
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Combo item override
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Combo Price Adjustment
+\end_layout
+
+\begin_layout Standard
+Each subitem that is part of a combination may adjust the price of the combinati
+on to account for substitution of subitems.
+ Prices entered into the adjustment field represent the price change from
+ the original combination.
+ For example 
+\begin_inset Quotes eld
+\end_inset
+
+$1.00
+\begin_inset Quotes erd
+\end_inset
+
+ will increase the combination by one dollar, while 
+\begin_inset Quotes eld
+\end_inset
+
+$-1.00
+\begin_inset Quotes erd
+\end_inset
+
+ will reduce the price by one dollar.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixOrderComboAdjust.png
+	lyxscale 75
+	width 6in
+	keepAspectRatio
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Combo item adjustment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Quick New Order
+\end_layout
+
+\begin_layout Standard
+At any point during the order process the current order may be aborted by
+ pressing the 
+\series bold
+<F7>
+\series default
+ key.
+ The aborted order will not print a receipt, nor will it be posted to the
+ database.
+ A new order is started with an empty customer.
+\end_layout
+
+\begin_layout Section
+Recall Last Order
+\end_layout
+
+\begin_layout Standard
+By pressing the 
+\series bold
+<F3>
+\series default
+ key the last order posted to the database is recalled with its customer
+ details and replaces the current order.
+ Use this feature to redisplay an order immediately after the receipt has
+ printed, or to reprint a receipt damaged during printing.
+\end_layout
+
+\begin_layout Section
+Custom Order Rules
+\end_layout
+
+\begin_layout Standard
+Custom rules may be created to add, remove, or change the order based on
+ your requirements.
+ Create perpetual specials to add free items based on purchase amount, or
+ trial new items by adding to each order free of charge.
+ Contact us for more information.
+\end_layout
+
+\begin_layout Chapter
+Payments
+\end_layout
+
+\begin_layout Standard
+Chopstix supports a full compliment of payment options to cope with both
+ regular and special circumstances.
+ Payment details are posted with the order for later reporting, but are
+ not processed in any way.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixPayment.png
+	lyxscale 75
+	width 6in
+	keepAspectRatio
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Payment section
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Discount
+\end_layout
+
+\begin_layout Standard
+A discount is price adjustment applied to the subtotal of an order.
+ It may be entered as either a dollar value or as a percentage of the subtotal.
+ To open the discount window press the 
+\series bold
+<F11>
+\series default
+ key.
+ Percentages can be entered by typing the numeric percentage followed by
+ the 
+\series bold
+'%'
+\series default
+ key.
+ The value of a discount is posted with the order.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixPaymentDiscount.png
+	lyxscale 75
+	width 6in
+	keepAspectRatio
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Discount window
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If a complaint credit is being applied to the order, the discount total
+ will display the value of the credit being applied.
+ If both a credit and a discount are applied, the sum of the discount and
+ credit will be displayed.
+\end_layout
+
+\begin_layout Section
+Delivery
+\end_layout
+
+\begin_layout Standard
+A delivery charge is applied to the subtotal of an order.
+ It may be entered as either a dollar value or as a percentage of the subtotal.
+ To open the delivery window press the 
+\series bold
+<F12>
+\series default
+ key.
+ Percentages can be entered by typing the numeric percentage followed by
+ the 
+\series bold
+'%'
+\series default
+ key.
+ The value of a delivery charge is posted with the order.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixPaymentDelivery.png
+	lyxscale 75
+	width 6in
+	keepAspectRatio
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Delivery window
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Taxes
+\end_layout
+
+\begin_layout Standard
+Chopstix supports two separate taxes for each order.
+ Taxes are applied to the subtotal after adjustment for credits, discounts,
+ and delivery charges.
+ Each tax is calculated separately before being added to the total.
+ Both taxes may be individually named and have an individual tax rate assigned.
+ See 
+\emph on
+Tax
+\emph default
+ in section
+\series bold
+ 
+\series default
+
+\begin_inset LatexCommand \vref{sub:Tax}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If your jurisdiction requires the printing of tax registration numbers on
+ customer receipts see 
+\emph on
+Tax Registration
+\emph default
+ in section 
+\begin_inset LatexCommand \vref{sub:Tax-Registration}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Payment Methods
+\end_layout
+
+\begin_layout Standard
+Chopstix offers a selection of the following payment methods:
+\end_layout
+
+\begin_layout Description
+Cash Payment is in cash or coin.
+\end_layout
+
+\begin_layout Description
+Credit\InsetSpace ~
+Card Payment is received via external credit card processing.
+ The credit card number and expiration date along with a signature line
+ are printed on the receipt.
+\end_layout
+
+\begin_layout Description
+Debit Payment is received via external debit or cheque card processing.
+\end_layout
+
+\begin_layout Description
+Void For details see 
+\emph on
+Void Payments
+\emph default
+ in 
+\begin_inset LatexCommand \vref{sec:Void-Payments}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Without a custom business rules module, the payment methods are used to
+ categorize orders within the order database and for printing on the receipt.
+ Custom business rules are able to use this choice to enable additional
+ actions such as automatic discounts or additional menu items to reward
+ payment methods.
+\end_layout
+
+\begin_layout Section
+Credit Cards
+\end_layout
+
+\begin_layout Standard
+When the 
+\series bold
+Credit Card
+\series default
+ payment method is selected, the credit card number and expiry are posted
+ with the order for later reporting.
+ Chopstix will not process the card number, rather it acts as a notation
+ to assist reconciling payments with multiple account statements from external
+ processors.
+\end_layout
+
+\begin_layout Section
+Cash Helper
+\end_layout
+
+\begin_layout Standard
+Once an order has been posted, a cash helper window is opened that may be
+ used to calculate change given.
+ The window is also opened on 
+\series bold
+Credit Card
+\series default
+ and 
+\series bold
+Debit
+\series default
+ payment methods to assist with split payment.
+ Any values entered are discarded when the window is closed.
+ The cash and change calculations are not posted with the order.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixCashHelper.png
+	lyxscale 75
+	width 6in
+	keepAspectRatio
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Cash helper window
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Custom Payment Rules
+\end_layout
+
+\begin_layout Standard
+Custom rules may be defined to modify the credit, discount, and delivery
+ totals based on order criteria.
+ Use custom rules to waive delivery charges above a certain total, or to
+ offer cash discounts for pickup.
+ The possibilities are endless.
+\end_layout
+
+\begin_layout Standard
+Contact us for details.
+\end_layout
+
+\begin_layout Chapter
+Receipts
+\end_layout
+
+\begin_layout Section
+Reprints
+\end_layout
+
+\begin_layout Standard
+Order receipts may be reprinted if necessary by pressing the 
+\series bold
+<F8>
+\series default
+ key.
+ In conjunction with the recall features, any recent order may be reprinted
+ in case of printer failure or damaged receipt.
+ Each reprint is clearly marked as a reprint and does not print the original
+ order number to prevent repeating common orders without posting to the
+ database.
+\end_layout
+
+\begin_layout Section
+Two Column Receipts
+\end_layout
+
+\begin_layout Standard
+Chopstix prints receipts in a two column format designed for use with centre
+ perforated paper.
+ This format creates both a customer and kitchen copy of the receipt simultaneou
+sly.
+ Send one to the kitchen while the customer copy is sent to a packing station
+ for assembly, or retain one copy for your daily records.
+\end_layout
+
+\begin_layout Standard
+Receipts print all user entered data in UPPERCASE.
+\end_layout
+
+\begin_layout Subsection
+Customer Copy
+\end_layout
+
+\begin_layout Standard
+The customer copy of the receipt contains the full order information plus
+ a signature line if the credit card payment method is chosen.
+\end_layout
+
+\begin_layout Subsection
+Kitchen Copy
+\end_layout
+
+\begin_layout Standard
+The kitchen copy of the receipt contains the full order.
+\end_layout
+
+\begin_layout Section
+Receipts in Detail
+\end_layout
+
+\begin_layout Subsection
+Business Name and Address
+\end_layout
+
+\begin_layout Standard
+Your business name and telephone number are printed in a large font at the
+ top of the receipt for maximum readability, while your street address is
+ printed in regular font below.
+ The city, province, and country may all be printed if required, see 
+\emph on
+Printer Show
+\emph default
+ in section 
+\begin_inset LatexCommand \vref{sub:Printer-Show}
+
+\end_inset
+
+ for details.
+\end_layout
+
+\begin_layout Subsection
+Order Details
+\end_layout
+
+\begin_layout Standard
+The handling portion of the receipt contains the date of the order, the
+ delivery method and the order number.
+ Use the order number to pack each order in succession, or pack delivery
+ orders first to speed driver turnaround.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReceiptHandling.eps
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Receipt: Handling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Customer Name and Address
+\end_layout
+
+\begin_layout Standard
+The destination portion of the receipt contains the phone number, name,
+ address, and driving directions for the customer.
+ It also notes the order repeat count to quickly identify regular customers
+ for special treatment.
+ The exact order time is also located here to assist drivers with delivery
+ guarantees if required.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReceiptDestination.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Receipt: Destination
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Items
+\end_layout
+
+\begin_layout Standard
+The order portion of the receipt contains a list of all line items from
+ the order including quantity, code, description and price.
+ Order items are printed line by line from the order.
+ Styles are printed below the item the style is defined for.
+ Per item special instructions are printed with 
+\series bold
+'***'
+\series default
+ to draw attention to the instruction.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReceiptItems.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Receipt: Items
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Custom Rule Items
+\end_layout
+
+\begin_layout Standard
+If custom rule items were added to the order, a blank space is added to
+ the order section followed by the rule items in the same format as regular
+ order items.
+\end_layout
+
+\begin_layout Subsection
+Extras
+\end_layout
+
+\begin_layout Standard
+If any items extras are attached to order items, the list of extras is printed
+ in an extras portion of the receipt.
+ This list is merged to print each item once only.
+ No price is printed for extra items as they are included in the price of
+ the order item.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReceiptExtra.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Receipt: Extras
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Special Instructions
+\end_layout
+
+\begin_layout Standard
+When special instructions exist, an instructions portion of the receipt
+ is printed that contains the full instructions from the order screen.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReceiptSpecial.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Receipt: Special instructions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Totals
+\end_layout
+
+\begin_layout Standard
+The totals portion of the receipt prints a subtotal followed by itemized
+ totals for tax1, tax2, discount, delivery and credit followed by the grand
+ total.
+ Each line is printed only if a value exists for the total.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReceiptTotal.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Receipt: Totals and credit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset LatexCommand \label{sub:Credit-Applied}
+
+\end_inset
+
+Credit Applied
+\end_layout
+
+\begin_layout Standard
+When a credit has been applied to an order, an additional line containing
+ the balance of credit remaining is printed on the receipt.
+\end_layout
+
+\begin_layout Subsection
+Registrations
+\end_layout
+
+\begin_layout Standard
+When tax registrations are set, the tax name and registration number are
+ printed below the totals portion of the receipt.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReceiptTaxreg.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Receipt: Tax registrations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Payment Method
+\end_layout
+
+\begin_layout Standard
+The final portion of the receipt prints the payment method, and a signature
+ line if required.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReceiptCreditline.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Receipt: Payment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Administration
+\end_layout
+
+\begin_layout Chapter
+Configuration
+\end_layout
+
+\begin_layout Standard
+Chopstix configuration is located in the file
+\family typewriter
+ /etc/chopstix.conf 
+\family default
+which can be changed with any text editor.
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+Site Installation
+\emph default
+ will preconfigure Chopstix.
+\end_layout
+
+\begin_layout Section
+chopstix.conf
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Company-Address}
+
+\end_inset
+
+Company Address
+\end_layout
+
+\begin_layout Standard
+Set the street address to be printed on receipts.
+ The address must match the licence certificate, with the exception of space
+ and punctuation.
+ When not set the street address from your licence certificate will be used.
+ 
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+company address 
+\series bold
+PO Box 292
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Company-City}
+
+\end_inset
+
+Company City
+\end_layout
+
+\begin_layout Standard
+Set the city to be printed on receipts.
+ When not set the city from your licence certificate will be used.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+company city 
+\series bold
+Carlisle
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Company-Name}
+
+\end_inset
+
+Company Name
+\end_layout
+
+\begin_layout Standard
+Set the name to be printed on receipts and on the title bar of Chopstix.
+ The name must match your licence certificate, with the exception of space
+ and punctuation.
+ When not set the name from your licence certificate will be used.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+company name 
+\series bold
+Chopstix
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Company-Province}
+
+\end_inset
+
+Company Province
+\end_layout
+
+\begin_layout Standard
+Set the province to be printed on receipts.
+ When not set the province from your licence certificate will be used.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+company province 
+\series bold
+Ontario
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Company-State}
+
+\end_inset
+
+Company State
+\end_layout
+
+\begin_layout Standard
+See 
+\emph on
+Company Province.
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Company-Country}
+
+\end_inset
+
+Company Country
+\end_layout
+
+\begin_layout Standard
+Set the country to be printed on receipts.
+ When not set the country from your licence certificate will be used.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+company country 
+\series bold
+CA
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Company-Phone}
+
+\end_inset
+
+Company Phone
+\end_layout
+
+\begin_layout Standard
+Set the telephone number to be printed on receipts.
+ This number must be contained within the telephone number of your licence
+ certificate.
+ For example 
+\begin_inset Quotes eld
+\end_inset
+
+905-555-4444
+\begin_inset Quotes erd
+\end_inset
+
+ will match the licence telephone number 
+\begin_inset Quotes eld
+\end_inset
+
++1 905 555 4444
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+company phone 
+\series bold
+905-555-4444
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Credit-Hide}
+
+\end_inset
+
+Credit Hide
+\end_layout
+
+\begin_layout Standard
+Hide the middle digits of a customer credit card number on the printed receipt.
+ Can be set for 
+\begin_inset Quotes eld
+\end_inset
+
+customer
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+kitchen
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+credit hide 
+\series bold
+customer
+\series default
+
+\newline
+credit hide 
+\series bold
+kitchen
+\series default
+
+\newline
+no credit hide 
+\series bold
+customer
+\series default
+
+\newline
+no credit hide 
+\series bold
+kitchen
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Credit-Signature}
+
+\end_inset
+
+Credit Signature
+\end_layout
+
+\begin_layout Standard
+Set which receipt receives a printed signature line.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+credit signature 
+\series bold
+customer
+\series default
+
+\newline
+credit signature 
+\series bold
+kitchen
+\series default
+
+\newline
+no credit signature 
+\series bold
+customer
+\series default
+
+\newline
+no credit signature 
+\series bold
+kitchen
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Database-Module}
+
+\end_inset
+
+Database Module
+\end_layout
+
+\begin_layout Standard
+Select the database module to use for Chopstix.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+database module 
+\series bold
+/usr/local/lib/libchopstix_sql.so.
+\family default
+\series default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+REPChopstixVer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Database-All}
+
+\end_inset
+
+Database All
+\end_layout
+
+\begin_layout Standard
+Select the database file the database module will use.
+\end_layout
+
+\begin_layout Quote
+database all 
+\series bold
+/var/db/chopstix/chopstix.db
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Licence}
+
+\end_inset
+
+Licence
+\end_layout
+
+\begin_layout Standard
+Select the licence file to retrieve the licence certificate from.
+\end_layout
+
+\begin_layout Quote
+licence 
+\series bold
+/etc/chopstix.licence
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Phone-Prefix}
+
+\end_inset
+
+Phone Prefix
+\end_layout
+
+\begin_layout Standard
+Set the area code for pre-entry into the Phone Number field.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+phone prefix 
+\series bold
+905
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Printer}
+
+\end_inset
+
+Printer
+\end_layout
+
+\begin_layout Standard
+Select the command for printing.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+printer 
+\series bold
+/usr/bin/lpr
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Printer-Bold}
+
+\end_inset
+
+Printer Bold
+\end_layout
+
+\begin_layout Standard
+Enable bold printing of either 
+\series bold
+title
+\series default
+ and/or 
+\series bold
+order
+\series default
+ portions of the receipt
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+printer bold 
+\series bold
+title
+\newline
+
+\series default
+printer bold 
+\series bold
+order
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Printer-Columns}
+
+\end_inset
+
+Printer Columns
+\end_layout
+
+\begin_layout Standard
+Change the number of columns used to print receipts.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+printer columns 
+\series bold
+80
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Printer-Feed}
+
+\end_inset
+
+Printer Feed
+\end_layout
+
+\begin_layout Standard
+Change the number of line feeds added after a receipt has printed to advance
+ the paper to the correct location for tearing.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+printer feed 
+\series bold
+16
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Printer-Show}
+
+\end_inset
+
+Printer Show
+\end_layout
+
+\begin_layout Standard
+Control receipt printing options for 
+\series bold
+city
+\series default
+, 
+\series bold
+province
+\series default
+, and 
+\series bold
+country
+\series default
+.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+printer show 
+\series bold
+city
+\series default
+
+\newline
+printer show 
+\series bold
+province
+\series default
+
+\newline
+printer show 
+\series bold
+country
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Rule-Module}
+
+\end_inset
+
+Rule Module
+\end_layout
+
+\begin_layout Standard
+Select the custom business rule module to be loaded and run by Chopstix.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+rule module 
+\series bold
+/usr/local/lib/librules_chopstix.so.
+\family default
+\series default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+REPChopstixVer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Tax}
+
+\end_inset
+
+Tax
+\end_layout
+
+\begin_layout Standard
+Define tax name and rate.
+ Chopstix supports two separate taxes.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+tax 
+\series bold
+1 PST 8%
+\series default
+
+\newline
+tax 
+\series bold
+2 GST 6%
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset LatexCommand \label{sub:Tax-Registration}
+
+\end_inset
+
+Tax Registration
+\end_layout
+
+\begin_layout Standard
+Define tax registration numbers to be printed on the receipt.
+ Leave unset if no registration number must be printed.
+\end_layout
+
+\begin_layout Quote
+
+\family typewriter
+tax 
+\series bold
+1
+\series default
+ registration 
+\series bold
+1234-5678
+\series default
+
+\newline
+tax 
+\series bold
+2
+\series default
+ registration 
+\series bold
+AA987654-ZZ
+\end_layout
+
+\begin_layout Chapter
+Accounting
+\end_layout
+
+\begin_layout Section
+\begin_inset LatexCommand \label{sec:Void-Payments}
+
+\end_inset
+
+Void Payments
+\end_layout
+
+\begin_layout Standard
+The special payment method 
+\series bold
+void
+\series default
+ allows the creation of orders that are not attributed to one of the defined
+ payment methods.
+ This allows creation of negative offset order to cancel an order without
+ deleting the cancelled order.
+\end_layout
+
+\begin_layout Standard
+The void payment method also bypasses any custom business rules that might
+ generate extra items or discounts.
+\end_layout
+
+\begin_layout Section
+\begin_inset LatexCommand \label{sec:Void-Delivery}
+
+\end_inset
+
+Void Delivery
+\end_layout
+
+\begin_layout Standard
+The special delivery type 
+\series bold
+void
+\series default
+ allows the creation of orders that are not attributed to one of the defined
+ delivery methods.
+ This in conjunction with void payments can be used to create offset orders.
+\end_layout
+
+\begin_layout Standard
+The void delivery type also bypasses any customer business rules that might
+ generate extra items or discounts.
+\end_layout
+
+\begin_layout Section
+Credit Cancellation
+\end_layout
+
+\begin_layout Standard
+To cancel an account credit, you must create an offset credit with a negative
+ balance.
+ You should also enter a reason for cancelling the credit.
+\end_layout
+
+\begin_layout Standard
+To remove all credit from an account, press 
+\series bold
+<F10>
+\series default
+ to open the credit window, then press the minus key 
+\series bold
+'-'
+\series default
+ followed by the amount shown to be remaining.
+\end_layout
+
+\begin_layout Section
+Daily Totals
+\end_layout
+
+\begin_layout Standard
+Chopstix has the ability to quickly display a snapshot of the current daily
+ totals for orders, taxes, and full total.
+ To display the daily total window, press 
+\series bold
+<F5>
+\series default
+.
+\end_layout
+
+\begin_layout Chapter
+Menus
+\end_layout
+
+\begin_layout Section
+Menu Database
+\end_layout
+
+\begin_layout Section
+Menu Manager
+\end_layout
+
+\begin_layout Standard
+The Chopstix Menu Manager allows modification of the store menu through
+ a web interface to the local databases.
+ If your Chopstix terminal is connected to a network, the menu manager can
+ also be accessed remotely with your username and password.
+\end_layout
+
+\begin_layout Standard
+The current menu code can be manually entered to select a previously deleted
+ menu item.
+\end_layout
+
+\begin_layout Subsection
+List
+\end_layout
+
+\begin_layout Standard
+The menu list shows a list of all current menu items.
+ Each item line contains the item code, the name of the item, its price,
+ any style choices defined, a list of extras and a list of subitems in the
+ case of a combo item.
+ Only active items are shown in the menu list.
+ An example of the menu list is figure 
+\begin_inset LatexCommand \vref{fig:Menu-listing}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixMenuList.png
+	lyxscale 50
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Menu-listing}
+
+\end_inset
+
+Menu listing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The details of a menu item can be shown by selecting the item name, while
+ selecting the item code allows editing of the item properties.
+ Any extras or subitems may be shown by selecting the appropriate item from
+ the list presented.
+\end_layout
+
+\begin_layout Subsection
+Info
+\end_layout
+
+\begin_layout Standard
+Menu item information is displayed when an item has been selected from the
+ menu list, or the item code has been manually entered into the menu manager.
+ The full details of the item including its menu generation number and current
+ status are displayed.
+ An example of menu item info is figure 
+\begin_inset LatexCommand \vref{fig:Menu-item-info}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixMenuInfo.png
+	lyxscale 50
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Menu-item-info}
+
+\end_inset
+
+Menu item info
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Edit
+\end_layout
+
+\begin_layout Standard
+The menu item edit command allows modification of menu items.
+ A menu item can be changed to correct errors, deleted to be removed from
+ the active menu, or created which regenerates the item with a new generation
+ number.
+ Regeneration is used to preserve the link between existing orders in the
+ database and the original menu item at the time of order, while changing
+ is used to build new items or to make corrections.
+ An example of menu editing is figure 
+\begin_inset LatexCommand \vref{fig:Menu-edit-item}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The Styles, Extras, and Subitems sections of the edit display allow the
+ change, creation and deletion of individual components of a menu item.
+ Each component line of the display contains command buttons which affect
+ only the individual line.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixMenuEdit.png
+	lyxscale 50
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Menu-edit-item}
+
+\end_inset
+
+Menu edit item
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+New
+\end_layout
+
+\begin_layout Standard
+New items may be created by simply entering the desired item code and selecting
+ Create.
+ The menu manager will create the new item and activate the edit display.
+ An example of a newly created item is figure 
+\begin_inset LatexCommand \vref{fig:Menu-new-item}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixMenuNew.png
+	lyxscale 50
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Menu-new-item}
+
+\end_inset
+
+Menu new item
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Printing
+\end_layout
+
+\begin_layout Standard
+The print option redisplays the current screen in a new window in a printer
+ friendly format.
+ An example of a menu list for printing is figure 
+\begin_inset LatexCommand \vref{fig:Menu-printing}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixMenuPrint.png
+	lyxscale 50
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Menu-printing}
+
+\end_inset
+
+Menu printing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Items 
+\end_layout
+
+\begin_layout Section
+Extras
+\end_layout
+
+\begin_layout Section
+Styles
+\end_layout
+
+\begin_layout Section
+Combos and Subitems
+\end_layout
+
+\begin_layout Section
+Menu Generations
+\end_layout
+
+\begin_layout Chapter
+Reports
+\end_layout
+
+\begin_layout Standard
+Chopstix provides reports on orders, payments, menu items, and customers
+ through a web interface to the local databases.
+ If your Chopstix terminal is connected to a network, reports can also be
+ accessed remotely with your username and password.
+\end_layout
+
+\begin_layout Standard
+The date range of the report can be changed by selecting a range from the
+ menu, or manually entering a start and stop date.
+ The default range is the current date.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReportFront.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+Chopstix reports
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Orders
+\end_layout
+
+\begin_layout Standard
+The orders report shows a list of all posted orders within the range selected.
+ Each order line contains the order number, the time the order was posted,
+ delivery method, payment type and all monetary values.
+ The final line contains the total for each of the subtotal, discount, delivery,
+ credit, taxes, and total.
+ An example of the orders report is figure 
+\begin_inset LatexCommand \vref{fig:Report-order-list}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReportOrderList.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Report-order-list}
+
+\end_inset
+
+Order list report
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The details of an order can be shown by selecting the order number.
+ In addition to redisplaying the order summary, this report shows customer
+ details including any special instructions at the time of the order.
+ Order items are individually shown, as are any items added as a result
+ of custom business rules.
+ An example of the order details report is figure 
+\begin_inset LatexCommand \vref{fig:Report-order-detail}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReportOrderDetail.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Report-order-detail}
+
+\end_inset
+
+Order detail report
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Payments
+\end_layout
+
+\begin_layout Standard
+The payments report summarizes all totals within the date range selected,
+ and lists each payment method individually to assist with reconciling external
+ payment processer statements.
+ An example of the payments report is figure 
+\begin_inset LatexCommand \vref{fig:Report-payments}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReportPayments.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Report-payments}
+
+\end_inset
+
+Payments report
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Menu Items
+\end_layout
+
+\begin_layout Standard
+The menu items report lists all menu items ordered during the date range
+ selected.
+ It also lists separately all rule items added by custom business rules
+ and all subitems contained within combo items.
+ The subitems list totals any per-item price change for substituted items.
+ An example of the menu items report is in figure 
+\begin_inset LatexCommand \vref{fig:Report-items}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReportItems.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Report-items}
+
+\end_inset
+
+Items report
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Customers
+\end_layout
+
+\begin_layout Standard
+The customers report lists all active customers within the date range selected.
+ It lists phone number, name, address, number of orders and total order
+ value.
+ An example of a customers report is figure 
+\begin_inset LatexCommand \vref{fig:Report-customer-list}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReportCustomerList.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Report-customer-list}
+
+\end_inset
+
+Customer list report
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Selecting a customer phone number shows the customer details including a
+ list of all credits applied to the account and the amount of credit remaining
+ on the account.
+ An example of customer details is figure 
+\begin_inset LatexCommand \vref{fig:Report-Customer-detail}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReportCustomerDetail.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Report-Customer-detail}
+
+\end_inset
+
+Customer detail report
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Printing
+\end_layout
+
+\begin_layout Standard
+The print option redisplays the current report in a new window in a printer
+ friendly format.
+ An example of an order list report for printing is figure 
+\begin_inset LatexCommand \vref{fig:Report-print}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Minisec
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Minisec
+\begin_inset Graphics
+	filename ChopstixReportPrint.png
+	lyxscale 75
+	width 6in
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Captionbelow
+\begin_inset LatexCommand \label{fig:Report-print}
+
+\end_inset
+
+Printable order list report
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Appendix
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+appendix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Keyboard Shortcuts
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<Up>,<Down>
+\series default
+ Move the cursor to between fields without saving any changes.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<Left>,<Right>
+\series default
+ Move the cursor within the current field.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<Tab>,<Enter> 
+\series default
+Move the cursor to the next field and store changes.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<PgUp>,<PgDn>
+\series default
+ Scroll the order entry section.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F1>
+\series default
+ Display navigation help.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F2>
+\series default
+ Recall customer last order.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F3>
+\series default
+ Recall last posted order.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F4>
+\series default
+ Change customer telephone number.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F5>
+\series default
+ Display daily totals.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F7>
+\series default
+ New order.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F8>
+\series default
+ Re-Print order.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F10>
+\series default
+ Open Credit/Complaint window.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F11>
+\series default
+ Open Discount window.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<F12>
+\series default
+ Open Delivery window.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<Ins>,<Del>
+\series default
+ Insert or Delete per-item special instructions.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<CTRL-L>
+\series default
+ Refresh screen, and clear status line.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<CTRL-P>
+\series default
+ Post order immediately.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<ALT-C>
+\series default
+ Launch Chopstix.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<ALT-D>
+\series default
+ Choose the desktop.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<ALT-M>
+\series default
+ Choose the menu.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<ALT-N>
+\series default
+ Choose next application.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<ALT-P>
+\series default
+ Choose previous application.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<ALT-R>
+\series default
+ Launch command shell (rxvt).
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<ALT-X>
+\series default
+ Launch command shell (xterm).
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<ALT-TAB>
+\series default
+ Choose next application.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<ALT-SHIFT-TAB>
+\series default
+ Choose previous application.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<ALT-F4>
+\series default
+ Close application.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<CTRL-F11>
+\series default
+ Fullscreen.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<CTRL-ALT-F1>
+\series default
+ Switch to the console login display.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<CTRL-ALT-F5>
+\series default
+ Switch to the graphics display.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<CTRL-ALT-Backspace> 
+\series default
+Forcefully terminate the video display server, and all running applications
+ including Chopstix.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<CTRL-ALT-Numpad+>
+\series default
+ Increase display resolution.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\series bold
+<CTRL-ALT-Numpad->
+\series default
+ Decrease display resolution.
+\end_layout
+
+\begin_layout Chapter
+Glossary of Terms
+\end_layout
+
+\begin_layout Description
+Custom\InsetSpace ~
+Business\InsetSpace ~
+Rules\InsetSpace ~
+Module The basic functionality of Chopstix can be extended
+ through the use of a custom business rules module that is loaded by the
+ program.
+\end_layout
+
+\begin_layout Description
+Customer\InsetSpace ~
+Database The tables within the main Chopstix database that store
+ all customer details and special instructions.
+\end_layout
+
+\begin_layout Description
+Database A collection of information records that is stored in a computer.
+\end_layout
+
+\begin_layout Description
+Extra See 
+\emph on
+Menu Item Extra.
+\end_layout
+
+\begin_layout Description
+Item See 
+\emph on
+Menu Item
+\end_layout
+
+\begin_layout Description
+Licence\InsetSpace ~
+Certificate The Chopstix program requires a licence to operate which
+ is provided as a text file containing the certificate.
+\end_layout
+
+\begin_layout Description
+Licence\InsetSpace ~
+Package When you purchase Chopstix, you will receive a package containing
+ a 
+\emph on
+Licence Certificate
+\emph default
+, 
+\emph on
+Manorsoft Account
+\emph default
+, and an initial password for your 
+\emph on
+Site Installation
+\emph default
+ accounts.
+\end_layout
+
+\begin_layout Description
+Manorsoft\InsetSpace ~
+Account Your Manorsoft username and password provide access to
+ the customer section of the Manorsoft website at http://
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPManorWeb
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Menu\InsetSpace ~
+Database The tables within the main Chopstix database that store all
+ menu items, styles extras, and subitems used in combos.
+\end_layout
+
+\begin_layout Description
+Menu\InsetSpace ~
+Item A representation of a real item offered for sale including a name,
+ item code and price.
+\end_layout
+
+\begin_layout Description
+Menu\InsetSpace ~
+Item\InsetSpace ~
+Extra An unvalued item attached to another menu item or menu subitem
+ that is automatically attached to an order receipt without being displayed
+ onscreen.
+\end_layout
+
+\begin_layout Description
+Menu\InsetSpace ~
+Item\InsetSpace ~
+Style A choice of one or more options for the preparation of a menu
+ item.
+\end_layout
+
+\begin_layout Description
+Menu\InsetSpace ~
+Subitem An unvalued item that is attached to another menu item for the
+ purpose of building a combination item.
+\end_layout
+
+\begin_layout Description
+Order\InsetSpace ~
+Database The tables within the main Chopstix database that store each
+ and every order that is posted.
+ All individual order items are posted at order time with style, price,
+ and special instructions to be retrieved later if required.
+\end_layout
+
+\begin_layout Description
+Site\InsetSpace ~
+Installation The standard installation of operating system, configuration
+ files and software packages necessary for Chopstix to operate.
+\end_layout
+
+\begin_layout Description
+Style See 
+\emph on
+Menu Item Style.
+\end_layout
+
+\begin_layout Description
+Subitem See 
+\emph on
+Menu Subitem.
+\end_layout
+
+\begin_layout Description
+Table A matrix or grid of data arranged in rows and columns.
+\end_layout
+
+\begin_layout Chapter
+Technical Support
+\end_layout
+
+\begin_layout Standard
+Manorsoft offers many support options to meet your individual business needs
+ and help you get the most out of your software investment.
+ Basic support is included with the purchase of a Chopstix Site Licence
+ and then you can choose additional options.
+\end_layout
+
+\begin_layout Subsection*
+Basic Support
+\end_layout
+
+\begin_layout Standard
+Basic Support covers the Chopstix program and its administration only.
+ All licenced users of Chopstix automatically receive basic support with
+ the purchase of a Chopstix Licence Certificate.
+\end_layout
+
+\begin_layout Itemize
+Chopstix program upgrades for a period of one (1) year from the date of
+ purchase.
+\end_layout
+
+\begin_layout Itemize
+Online support available at 
+\series bold
+http://
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPManorWeb
+\end_layout
+
+\end_inset
+
+/support/
+\end_layout
+
+\begin_layout Itemize
+E-Mail support through 
+\series bold
+support@
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPManorEmail
+\end_layout
+
+\end_inset
+
+
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+Telephone support for installation issues only for a period of ninety (90)
+ days from the date of purchase.
+ In the US and Canada call 
+\series bold
+
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPManorPhone
+\end_layout
+
+\end_inset
+
+
+\series default
+.
+\end_layout
+
+\begin_layout Subsection*
+Extended Support
+\end_layout
+
+\begin_layout Standard
+Extended Support is available at an additional charge for Chopstix, the
+ host operating system OpenBSD, general networking, and custom software
+ solutions.
+ Please contact Manorsoft for details and pricing.
+\end_layout
+
+\begin_layout Quote
+
+\series bold
+Manorsoft
+\series default
+
+\newline
+No longer active
+\newline
+Nowhere, Ontario
+\newline
+H0H 0H0
+\newline
+Phone: 
+\series bold
+
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPManorPhone
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\newline
+Email: 
+\series bold
+support@
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPManorEmail
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

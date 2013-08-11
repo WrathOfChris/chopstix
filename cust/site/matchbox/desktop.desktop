@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Desktop
+Comment=Toggle Desktop Visiblity
+Exec=matchbox-remote -desktop
+Type=PanelApp
+Icon=mbdesktop.png
+X-MB-NoWindow=true
+Categories=Action

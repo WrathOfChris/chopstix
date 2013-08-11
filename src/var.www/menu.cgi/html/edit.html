@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- $Gateweaver: edit.html,v 1.5 2007/09/27 01:46:04 cmaxwell Exp $ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>%%TITLE%%</title>
+	<link rel="stylesheet" type="text/css" href="%%BASECSS%%" />
+</head>
+
+<body>
+
+<div id="main">
+%%HEADER%%
+
+<div class="outer"><div class="inner"><div class="float-wrap"><div id="content">
+
+<h3>%%ITEMCODE%% %%ITEMNAME%%</h3>
+<table class="list">
+<form action="%%BASEURL%%?action=edititem" method="post">
+<input type="hidden" name="menucode" value="%%ITEMCODE%%" />
+<input type="hidden" name="menugen" value="%%ITEMGEN%%" />
+<input type="hidden" name="itemnameold" value="%%ITEMNAME%%" />
+<input type="hidden" name="itempriceold" value="%%ITEMPRICE%%" />
+<tr><th scope="row"><b>Menu Code</b></th>
+	<td><b>%%ITEMCODE%%</b></td></tr>
+<tr><th scope="row"><b>Generation</b></th>
+	<td><b>%%ITEMGEN%%</b></td></tr>
+<tr><th scope="row"><b>Status</b></th>
+	<td><b>%%ITEMFLAGS%%</b></td></tr>
+<tr><th scope="row"><b>New Code</b></th>
+	<td><input type="text" name="itemcodenew" value="%%ITEMCODE%%" size="24" /></td></tr>
+<tr><th scope="row"><b>Name</b></th>
+	<td><input type="text" name="itemnamenew" value="%%ITEMNAME%%" size="24" /></td></tr>
+<tr><th scope="row"><b>Price</b></th>
+	<td><input type="text" name="itempricenew" value="%%ITEMPRICE%%" size="24" /></td></tr>
+<tr><td></td>
+	<td><input type="submit" name="cmd" value="Change" />
+		<input type="submit" name="cmd" value="Create" />
+		<input type="submit" name="cmd" value="Delete" /></td></tr>
+</form>
+</table>
+
+<h3>Styles</h3>
+<table class="list">
+<tr>
+	<th class="col"><b>Style</b></th>
+	<th></th>
+</tr>
+
+%%ROWRESET%%
+%%EDITSTYLES%%
+
+<form action="%%BASEURL%%?action=editstyle" method="post">
+<input type="hidden" name="menucode" value="%%ITEMCODE%%" />
+<input type="hidden" name="menugen" value="%%ITEMGEN%%" />
+<input type="hidden" name="stylenameold" value="" />
+<tr>
+	<td><input type="text" name="stylenamenew" size="24" /></td>
+	<td><input type="submit" name="cmd" value="Create" /></td>
+</tr>
+</form>
+
+</table>
+
+<h3>Extras</h3>
+<table class="list">
+<tr>
+	<th class="col"><b>Qty</b></th>
+	<th class="col"><b>Code</b></th>
+	<th class="col"><b>Name</b></th>
+	<th></th>
+</tr>
+
+%%ROWRESET%%
+%%EDITEXTRAS%%
+
+<form action="%%BASEURL%%?action=editextra" method="post">
+<input type="hidden" name="menucode" value="%%ITEMCODE%%" />
+<input type="hidden" name="menugen" value="%%ITEMGEN%%" />
+<input type="hidden" name="extraqtyold" value="" />
+<input type="hidden" name="extracodeold" value="" />
+<tr>
+	<td><input type="text" name="extraqtynew" size="3" /></td>
+	<td><input type="text" name="extracodenew" size="6" /></td>
+	<td></td>
+	<td><input type="submit" name="cmd" value="Create" /></td>
+</tr>
+</form>
+
+</table>
+
+<h3>Subitems</h3>
+<table class="list">
+<tr>
+	<th class="col"><b>Qty</b></th>
+	<th class="col"><b>Code</b></th>
+	<th class="col"><b>Name</b></th>
+	<th></th>
+</tr>
+
+%%ROWRESET%%
+%%EDITSUBITEMS%%
+
+<form action="%%BASEURL%%?action=editsubitem" method="post">
+<input type="hidden" name="menucode" value="%%ITEMCODE%%" />
+<input type="hidden" name="menugen" value="%%ITEMGEN%%" />
+<input type="hidden" name="subitemqtyold" value="" />
+<input type="hidden" name="subitemcodeold" value="" />
+<tr>
+	<td><input type="text" name="subitemqtynew" size="3" /></td>
+	<td><input type="text" name="subitemcodenew" size="6" /></td>
+	<td></td>
+	<td><input type="submit" name="cmd" value="Create" /></td>
+</tr>
+</form>
+
+</table>
+
+</table>
+</div></div></div></div>
+</div>
+
+%%FOOTER%%
+
+</body>
+</html>

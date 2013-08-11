@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rss version="0.92">
+  <channel>
+
+    <title>Manorsoft Errata</title>
+    <link>http://news.manorsoft.ca/</link>
+    <description>Manorsoft.</description>
+    <language>en-us</language>
+    <managingEditor>chris@manorsoft.ca</managingEditor>
+
+    <image>
+      <title>Chopstix</title>
+      <url>http://www.manorsoft.ca/images/ChopstixLogo.gif</url>
+      <link>http://www.manorsoft.ca/</link>
+      <width>144</width>
+      <height>63</height>
+      <description>Manorsoft Chopstix.</description>
+    </image>
+
+%%ITEMS%%
+
+  </channel>
+</rss>

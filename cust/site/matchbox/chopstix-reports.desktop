@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Reports
+Comment=Chopstix Reports
+Exec=konq-e http://%%HOSTNAME%%/chopstix/report.cgi
+Icon=mbnoapp.png
+Type=Application
+Categories=Reports

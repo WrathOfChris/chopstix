@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- $Gateweaver: order_detail.html,v 1.5 2007/09/12 15:51:35 cmaxwell Exp $ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>%%TITLE%%</title>
+	<link rel="stylesheet" type="text/css" href="%%BASECSS%%" />
+</head>
+
+<body>
+
+<div id="main">
+%%HEADER%%
+
+<div class="outer"><div class="inner"><div class="float-wrap"><div id="content">
+
+<!-- Customer Info -->
+<h3>Customer</h3>
+<table class="list">
+	<tr><th scope="row"><b>Phone</b></th><td><a href="%%BASEURL%%?action=custdetail&amp;cust=%%CUSTID%%">%%CUSTPHONE%%</a></td></tr>
+	<tr><th scope="row"><b>Name</b></th><td>%%CUSTNAME%%</td></tr>
+	<tr><th scope="row"><b>Address</b></th><td>%%CUSTADDR%%</td></tr>
+	<tr><th scope="row"><b>Intersection</b></th><td>%%CUSTISECT%%</td></tr>
+	<tr><th scope="row"><b>Repetitions</b></th><td>%%CUSTREPS%%</td></tr>
+	<tr><th scope="row"><b>Special</b></th><td>%%CUSTSPECIAL%%</td></tr>
+	<tr><th scope="row"><b>Credits</b></th><td>%%CUSTCREDITS%%</td></tr>
+</table>
+
+<!-- Order Info -->
+<h3>Order</h3>
+<table class="list">
+	<tr><th scope="row"><b>ID</b></th><td>%%ORDERCODE%%</td></tr>
+	<tr><th scope="row"><b>Date/Time</b></th><td>%%ORDERDATETIME%%</td></tr>
+	<tr><th scope="row"><b>Order Type</b></th><td>%%ORDERTYPE%%</td></tr>
+	<tr><th scope="row"><b>Payment Type</b></th><td>%%ORDERPAYDETAIL%%</td></tr>
+	<tr><th scope="row"><b>Special</b></th><td>%%ORDERSPECIAL%%</td></tr>
+	<tr><th scope="row"><b>SubTotal</b></th><td>%%ORDERSUBTOTAL%%</td></tr>
+	<tr><th scope="row"><b>Discount</b></th><td>%%ORDERDISCOUNT%%</td></tr>
+	<tr><th scope="row"><b>Delivery</b></th><td>%%ORDERDELIVERY%%</td></tr>
+	<tr><th scope="row"><b>Credit</b></th><td>%%ORDERCREDIT%%</td></tr>
+	<tr><th scope="row"><b>Tax1</b></th><td>%%ORDERTAX1%%</td></tr>
+	<tr><th scope="row"><b>Tax2</b></th><td>%%ORDERTAX2%%</td></tr>
+	<tr><th scope="row"><b>Total</b></th><td>%%ORDERTOTAL%%</td></tr>
+</table>
+
+<!-- Order Details -->
+<h3>Order Items</h3>
+<table class="item">
+<tr>
+	<th scope="col"><b>Qty</b></th>
+	<th scope="col"><b>Code</b></th>
+	<th scope="col"><b>Description</b></th>
+	<th scope="col"><b>Unit Price</b></th>
+	<th scope="col"><b>Price</b></th>
+</tr>
+
+%%ROWRESET%%
+%%ORDERITEMS%%
+
+</table>
+
+<!-- Rule Details -->
+<h3>Rule Items</h3>
+<table class="item">
+<tr>
+	<th scope="col"><b>Qty</b></th>
+	<th scope="col"><b>Code</b></th>
+	<th scope="col"><b>Description</b></th>
+	<th scope="col"><b>Unit Price</b></th>
+	<th scope="col"><b>Price</b></th>
+</tr>
+
+%%ROWRESET%%
+%%ORDERRULEITEMS%%
+
+</table>
+</div></div></div></div>
+</div>
+
+%%FOOTER%%
+
+</body>
+</html>

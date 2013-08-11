@@ -1,0 +1,232 @@
+/* $Gateweaver
+/*
+ * Copyright (c) 2007 Christopher Maxwell.  All rights reserved.
+ * Developed by Eivind Savio http://www.strictlycss.com
+ */
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+body, html  {
+	font-family: Verdana, Arial, Tahoma, Helvetica, Geneva, sans-serif;
+	color: #000;
+	background-color: #eee;
+	text-align: center;
+}
+body {
+	font-size: 80%;
+}
+p {
+	padding: 7px 0 7px 0;
+}
+
+a {
+	color: #336666;
+}
+a:hover {
+	color: #669999;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.4em;
+}
+h3 {
+	font-size: 1.3em;
+}
+h1 a #header h2 {
+	color: #fff;
+}
+
+.clear { clear: both; }
+
+#main {
+	width: 760px;
+	margin: 0 auto;
+	min-height: 300px;
+	background: white;
+	text-align: left;
+}
+* html #main {
+	height: 300px;
+}
+
+/* HEADER */
+#header {
+	background: white;
+	padding: 10px;
+}
+
+/* CONTENT AND COLUMNS */
+.outer {
+	margin-top: 50px;
+	padding-left: 165px;
+}
+
+.inner {
+	width: 595px;
+}
+* html .inner {
+	width: 100%;
+}
+
+.float-wrap {
+	float: left;
+	width: 760px;
+	margin-left: -165px;
+	margin-top: -20px;	/* adjust to RIGHT */
+}
+
+#content {
+	float: left;
+	width: 600px;
+	background: white;
+}
+* html #content {
+	position: relative;
+}
+
+.contentWrap {
+	padding: 5px;
+}
+.contentWrap ol, .contentWrap ul {
+	margin: 3px 0 5px 35px;
+}
+.contentWrap li {
+	padding-bottom: 2px;
+}
+.contentWrap input, .contentWrap textarea, .contentWrap select {
+	border: 1px solid #aaaaaa;
+}
+.contentWrap hr {
+	color: black;
+	background-color: black;
+	height: 1px;
+}
+
+/* LEFT COLUMN */
+#left {
+	float: right;
+	width: 150px;
+	background: white;
+	min-height: 250px;
+	padding: 5px;
+}
+* html #left {
+	position: relative;
+	height: 250px;
+}
+#left ul {
+	list-style: none;
+	padding-bottom: 4px;
+}
+#left li {
+	padding-bottom: 2px;
+}
+#left input {
+	border: 1px solid #aaaaaa;
+}
+
+/* RIGHT COLUMN */
+#right {
+	margin: -50px 0 0 -760px;
+	float: left; 
+	width: 750px;
+	background: #336666;
+	padding: 5px;
+	height: 20px;
+} 
+* html #right {
+	position: relative;
+}
+#right ul {
+	list-style: none;
+}
+#right li {
+	display: inline;
+	padding-right: 15px;
+}
+#right a {
+	color: white;
+}
+
+/* FOOTER */
+#footer {
+	width: 760px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: white;
+}
+
+/* MORE */
+img.splash {
+	float: right;
+}
+
+table.print {
+	width: 100%;
+}
+
+.print_border {
+}
+
+.print_border table {
+	width: 100%;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+.print_border th {
+	background: #cccccc;
+	text-align: left;
+	border: 1px solid #cccccc;
+}
+
+.print_border td {
+	font-size: 150%;
+	border: 1px solid #cccccc;
+}
+
+.print_totals {
+}
+
+.print_totals table {
+	width: 100%;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+.print_totals th {
+	background: #cccccc;
+	text-align: left;
+	border: 1px solid #cccccc;
+}
+
+.print_totals td {
+	border: 1px solid #cccccc;
+}
+
+.row0 {
+	background-color: #ffffff;
+}
+
+.row1 {
+	background-color: #e1e1e1;
+}
+
+.borderoff {
+	border: none;
+}
+
+.bordertop {
+	border: none;
+	border-top: 1px solid #000000;
+}

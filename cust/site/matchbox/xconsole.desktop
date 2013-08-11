@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Console
+Comment=System Console
+Exec=xconsole -notify -verbose -fn fixed
+Type=Application
+Icon=mbnoapp.png
+Categories=System

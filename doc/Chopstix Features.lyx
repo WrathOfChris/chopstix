@@ -1,0 +1,776 @@
+#LyX 1.4.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 245
+\begin_document
+\begin_header
+\textclass book
+\begin_preamble
+\usepackage{ae,aecompl}
+\def\RCS$#1: #2 ${\expandafter\def\csname RCS#1\endcsname{#2}}
+\RCS$Revision: 1.7 $
+\RCS$Date: 2007/10/07 23:09:32 $
+\RCS$Author: cmaxwell $
+\def\REP$#1: #2 ${\expandafter\def\csname REP#1\endcsname{#2}}
+\REP$Chopstix: Chopstix 1.1 $
+\REP$ChopstixVer: 1.1 $
+\REP$OpenBSD: OpenBSD 4.2 $
+\REP$ManorWeb: www.manorsoft.ca $
+\REP$ManorEmail: manorsoft.ca $
+\REP$ManorPhone: (905) 000-0000 $
+\REP$ManorFax: (905) 000-0000 $
+\end_preamble
+\language english
+\inputencoding auto
+\fontscheme bookman
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 0.5in
+\topmargin 0.75in
+\rightmargin 0.5in
+\bottommargin 0.5in
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter*
+\begin_inset Graphics
+	filename ChopstixLogo.gif
+
+\end_inset
+
+
+\newline
+Features
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Document Information
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\align left
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features>
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Version:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPChopstix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Updated:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+RCSDate
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+By:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+RCSAuthor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Revision:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+RCSRevision
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Manorsoft
+\end_layout
+
+\begin_layout Address
+No longer active
+\newline
+Nowhere, Ontario
+\newline
+H0H 0H0
+\newline
+http://
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPManorWeb
+\end_layout
+
+\end_inset
+
+
+\newline
+Tel: 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPManorPhone
+\end_layout
+
+\end_inset
+
+
+\newline
+Email: info@
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPManorEmail
+\end_layout
+
+\end_inset
+
+
+\newpage
+
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Customer Details
+\end_layout
+
+\begin_layout Subsection*
+Telephone Number Lookup
+\end_layout
+
+\begin_layout Standard
+Retrieve customer details by entering only the telephone number.
+ Chopstix will display previously entered name, address, and special instruction
+s from previous orders.
+\end_layout
+
+\begin_layout Subsection*
+Area Code Pre-Entry
+\end_layout
+
+\begin_layout Standard
+Select a local area code and Chopstix will pre-enter the area code into
+ the telephone number lookup.
+ Reduce typing and speed order entry.
+\end_layout
+
+\begin_layout Subsection*
+Telephone Number Extension
+\end_layout
+
+\begin_layout Standard
+Enter an internal extension number for corporate customers to bypass the
+ operator or for late night orders.
+\end_layout
+
+\begin_layout Subsection*
+Apartment and Building Entry
+\end_layout
+
+\begin_layout Standard
+The unit number in a multi-tenant building is entered separately from the
+ building address allowing it to be clearly displayed on the customer receipt
+ for delivery orders.
+ Chopstix can also store additional building entry instructions to assist
+ drivers in successfully delivering the order such as building entry codes,
+ instructions to outdoor events and room numbers for corporate orders.
+\end_layout
+
+\begin_layout Subsection*
+Main Intersection
+\end_layout
+
+\begin_layout Standard
+Enter driving directions for difficult to find addresses, major landmarks,
+ or main cross streets to assist drivers in locating the address.
+\end_layout
+
+\begin_layout Subsection*
+Repeat Order Count
+\end_layout
+
+\begin_layout Standard
+Chopstix displays the number of times the customer has ordered.
+ Use the count to identify regular customers or for new customer specials.
+\end_layout
+
+\begin_layout Subsection*
+Multiple Delivery Methods
+\end_layout
+
+\begin_layout Standard
+Select at order time the method of delivery which will be printed on the
+ receipt enabling you to separate orders by delivery method.
+ Keep pickup orders hot by the door while orders for delivery can be made
+ ready for fast driver turnaround.
+\end_layout
+
+\begin_layout Subsection*
+Customer Last Order Recall
+\end_layout
+
+\begin_layout Standard
+Retrieve all the items from the customer's last order and load them into
+ the current order.
+ Quickly repeat a favourite order, or helpfully suggest items the customer
+ previously enjoyed.
+\end_layout
+
+\begin_layout Subsection*
+Change Customer Telephone Number
+\end_layout
+
+\begin_layout Standard
+Transfer all customer details to a new telephone number, no retyping required
+ and all order history is preserved with the new number.
+\end_layout
+
+\begin_layout Subsection*
+Complaints and Account Credits
+\end_layout
+
+\begin_layout Standard
+When a customer has a complaint about an order, preserve the customer relationsh
+ip and ensure a future order by recording the complaint and applying a credit
+ to the next purchase or purchases.
+ Chopstix automatically applies the credit balance to future orders until
+ the balance is exhausted.
+\end_layout
+
+\begin_layout Subsection*
+Special Instructions
+\end_layout
+
+\begin_layout Standard
+When a customer has a special request, store it with the customer details.
+ Surprise your customers by remembering their previous requests during the
+ order process.
+ All special instructions will be printed on both kitchen and customer receipts.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Order Entry
+\end_layout
+
+\begin_layout Subsection*
+Menu Code Item Entry
+\end_layout
+
+\begin_layout Standard
+Enter items based on your own menu codes to keep pace with customer order
+ speed.
+ Simply enter quantity and code to complete the item and the full name and
+ price are automatically inserted.
+\end_layout
+
+\begin_layout Subsection*
+Real Time Totals
+\end_layout
+
+\begin_layout Standard
+All totals including taxes, discounts, delivery charges and specials are
+ displayed on-screen as each item is entered.
+\end_layout
+
+\begin_layout Subsection*
+Per Item Instructions
+\end_layout
+
+\begin_layout Standard
+Insert special instructions to any individual item on the order.
+ Swap ingredients, specify cooking instructions or reinforce allergy requirement
+s.
+ All item instructions are printed on both kitchen and customer receipts.
+\end_layout
+
+\begin_layout Subsection*
+Item Style Choices
+\end_layout
+
+\begin_layout Standard
+Each menu item may have multiple styles assigned to differentiate similar
+ items.
+ Some uses include choice of sauce type, cooking length or main ingredient.
+\end_layout
+
+\begin_layout Subsection*
+Item Extras
+\end_layout
+
+\begin_layout Standard
+Each menu item may have multiple unvalued items attached to it for inclusion
+ on the printed receipt.
+ Use extra items to include specific condiments, cutlery, or prepackaged
+ additional items such as soup crackers or dry noodles.
+\end_layout
+
+\begin_layout Subsection*
+Combo Items
+\end_layout
+
+\begin_layout Standard
+Chopstix allows the creation of special combo menu items which contain one
+ or more sub-items with a package price.
+ Each sub-item is individually displayed on the order and all normal item
+ features such as styles, extras, and special instructions are available.
+\end_layout
+
+\begin_layout Subsection*
+Combo Item Override and Adjustment
+\end_layout
+
+\begin_layout Standard
+Change any combo sub-item, allowing substitution of combo components.
+ The price of the combo can be manually adjusted up or down on each sub-item
+ to account for the price difference between the original item and its replaceme
+nt.
+\end_layout
+
+\begin_layout Subsection*
+Multiple Payment Methods
+\end_layout
+
+\begin_layout Standard
+Select a payment type during the order process and it will be printed clearly
+ on the receipt to assist with external payment processing.
+ Use the payment method to ease reconciling daily totals for cash, credit
+ card and debit purchases.
+\end_layout
+
+\begin_layout Subsection*
+Credit Card Information
+\end_layout
+
+\begin_layout Standard
+Gather customer credit card information during the order process to ensure
+ cardholder signature by printing card info and signature line on the receipt.
+\end_layout
+
+\begin_layout Subsection*
+Void Payments
+\end_layout
+
+\begin_layout Standard
+The void payment method allows the creation of specially designated orders
+ that can be used to account for non-standard events.
+ Chopstix balances the need for accountability with the reality of canceled
+ orders, refused deliveries, and special circumstances.
+\end_layout
+
+\begin_layout Subsection*
+Custom Business Rules
+\end_layout
+
+\begin_layout Standard
+Chopstix supports running custom business rules to implement policies such
+ as waived delivery charges, free items, specials, cash and pickup discounts,
+ linked items, and more.
+ Contact us for more information.
+\end_layout
+
+\begin_layout Subsection*
+Cash Helper
+\end_layout
+
+\begin_layout Standard
+When a Cash payment is chosen the Cash Helper window will appear during
+ receipt printing to assist with calculation of change to be returned based
+ on cash tendered.
+\end_layout
+
+\begin_layout Subsection*
+Receipt Reprint
+\end_layout
+
+\begin_layout Standard
+Chopstix will reprint an order receipt when necessary, such as during printer
+ failure or the original receipt is damaged during order preparation.
+\end_layout
+
+\begin_layout Subsection*
+Discount
+\end_layout
+
+\begin_layout Standard
+A manual discount in dollars or percent can be applied to any order.
+ Reward loyal customers, set favourable pricing for large orders, or handle
+ off-menu items with negative discounts.
+\end_layout
+
+\begin_layout Subsection*
+Delivery Charge
+\end_layout
+
+\begin_layout Standard
+A manual delivery charge can be set or waived that overrides normal business
+ rules charges.
+\end_layout
+
+\begin_layout Subsection*
+Quick New Order
+\end_layout
+
+\begin_layout Standard
+Immediately abort the current order and begin a new order with a single
+ keystroke.
+\end_layout
+
+\begin_layout Subsection*
+Recall Last
+\end_layout
+
+\begin_layout Standard
+Retrieve the last posted order without first entering the customer telephone
+ number.
+\end_layout
+
+\begin_layout Subsection*
+Multiple Local Terminals
+\end_layout
+
+\begin_layout Standard
+Chopstix supports multiple additional terminals networked to the main terminal.
+ No additional licence required.
+\end_layout
+
+\begin_layout Section*
+
+\bar under
+Receipt Printing
+\end_layout
+
+\begin_layout Subsection*
+Two Column Receipt
+\end_layout
+
+\begin_layout Standard
+Chopstix generates a split receipt format that places the kitchen and customer
+ copy of the receipt side by side for use with perforated paper.
+ Both receipts are printed simultaneously to avoid lost or mixed-up receipts
+ in a busy establishment.
+\end_layout
+
+\begin_layout Subsection*
+Order Time
+\end_layout
+
+\begin_layout Standard
+The exact time that the order was posted is printed on both receipts.
+ Useful for determining wait and delivery times.
+\end_layout
+
+\begin_layout Subsection*
+Delivery Method
+\end_layout
+
+\begin_layout Standard
+The method of delivery is included in the details portion of the receipt
+ to prevent incorrect delivery.
+\end_layout
+
+\begin_layout Subsection*
+Payment Method
+\end_layout
+
+\begin_layout Standard
+The method of payment is clearly printed at the bottom of the receipt to
+ prevent orders requiring additional actions such as physical card swipe
+ from being delivered before payment.
+\end_layout
+
+\begin_layout Subsection*
+Per Item Instructions
+\end_layout
+
+\begin_layout Standard
+Each item special instruction is clearly indicated on both receipts to ensure
+ the instruction is complied with by staff.
+\end_layout
+
+\begin_layout Subsection*
+Tax Registration
+\end_layout
+
+\begin_layout Standard
+In jurisdictions that require a tax registration number declaration on the
+ receipt, one or both tax registration numbers may be printed on the receipt.
+\end_layout
+
+\begin_layout Subsection*
+Credit Card Signature Line
+\end_layout
+
+\begin_layout Standard
+A signature line is printed on the receipt when a credit card is used to
+ order.
+ Avoid charge-backs by obtaining the customer signature at delivery.
+\end_layout
+
+\begin_layout Subsection*
+Custom Business Rule Items
+\end_layout
+
+\begin_layout Standard
+Items added as a result of custom business rules are printed in the order
+ portion of the receipt below a blank space to clearly differentiate.
+ This allows behaviour such as sauce choices or free items at certain purchase
+ levels to be appended to the order.
+\end_layout
+
+\begin_layout Subsection*
+Item Extras
+\end_layout
+
+\begin_layout Standard
+Menu item extras are printed below the order section of the receipt to clearly
+ indicate the difference from normal items.
+ If these items are prepackaged, this section can be used to speed order
+ packing during preparation.
+\end_layout
+
+\begin_layout Subsection*
+Credit Remaining
+\end_layout
+
+\begin_layout Standard
+When an account credit has been applied to an order, or a manual negative
+ balance was placed on the account, the credit balance remaining is printed
+ on the receipt.
+\end_layout
+
+\begin_layout Subsection*
+Simple Receipt
+\end_layout
+
+\begin_layout Standard
+Optimized for line printers, the simple design of the receipt permits high
+ speed printing to keep pace with orders.
+\end_layout
+
+\begin_layout Subsection*
+Receipt Quality and Speed Settings
+\end_layout
+
+\begin_layout Standard
+Increase the quality or the speed of receipt printing based on printer capabilit
+ies and business requirements.
+\end_layout
+
+\begin_layout Subsection*
+Receipt Print Queue
+\end_layout
+
+\begin_layout Standard
+Once an order has been posted, the print job for the receipt is queued and
+ Chopstix is ready to take a new order while the receipt is still printing.
+ When multiple terminals are in use, a single receipt printer may be shared.
+\end_layout
+
+\begin_layout Section*
+Administration
+\end_layout
+
+\begin_layout Subsection*
+Web-based Menu Manager
+\end_layout
+
+\begin_layout Standard
+Use a standard web browser to maintain the menu for Chopstix.
+ Add new items, change prices, redefine specials all through standard web
+ forms.
+\end_layout
+
+\begin_layout Subsection*
+Menu Item Generations
+\end_layout
+
+\begin_layout Standard
+Chopstix tracks changes to the menu so it can preserve order history while
+ allowing menu changes at any time.
+ Retrieving an old order will always show the menu item as it was at the
+ time of the order.
+\end_layout
+
+\begin_layout Subsection*
+Daily Report
+\end_layout
+
+\begin_layout Standard
+Show all orders for the day including daily totals for subtotal, discount,
+ delivery, taxes and total receipts.
+ Orders may be individually opened to view item details, and any special
+ instructions posted with the order.
+\end_layout
+
+\begin_layout Subsection*
+Opensource Database Format
+\end_layout
+
+\begin_layout Standard
+All information gathered by Chopstix is stored in an opensource database
+ format provided by SQLite.
+ Create additional reports by querying the database directly, and rest assured
+ your customer and order data is not locked into a proprietary format.
+\end_layout
+
+\begin_layout Subsection*
+Backups
+\end_layout
+
+\begin_layout Standard
+The Chopstix database can be backed up in an industry standard SQL statement
+ format.
+ Use the backup to restore Chopstix or export it to another database for
+ your own use.
+\end_layout
+
+\end_body
+\end_document

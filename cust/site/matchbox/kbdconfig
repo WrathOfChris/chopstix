@@ -1,0 +1,24 @@
+# $Gateweaver: kbdconfig,v 1.2 2007/09/09 15:50:03 cmaxwell Exp $
+#
+# See the matchbox manual for more info ( http://projects.o-hand.com/matchbox )
+
+### Window operation short cuts 
+
+<alt>n=next
+<alt>p=prev
+<alt>d=desktop
+<alt>f4=close
+<alt>m=!matchbox-remote -mbmenu
+<ctrl>escape=!matchbox-remote -mbmenu
+<alt>Tab=next
+<alt><shift>Tab=prev
+<alt>space=taskmenu
+<alt>escape=!matchbox-remote -mbmenu
+
+<ctrl>f11=fullscreen
+
+### App launching.
+
+<Alt>c=!rxvt -bg black -fg white -cr 9 -pr 10 -fn -*-neep-*-*-*-*-*-140-*-*-*-*-*-* -tn xterm-color -sr +sb -title Chopstix -e chopstix
+<ctrl><alt>x=!xterm -bg black -fg white -cr 9 -fn -*-neep-*-*-*-*-*-140-*-*-*-*-*-* -tn xterm-color -rightbar
+<ctrl><alt>r=!rxvt -bg black -fg white -cr 9 -pr 10 -fn -*-neep-*-*-*-*-*-140-*-*-*-*-*-* -tn xterm-color -sr

@@ -1,0 +1,27 @@
+# $Gateweaver: sudoers,v 1.4 2007/09/17 14:38:32 cmaxwell Exp $
+#
+# This file MUST be edited with the 'visudo' command as root.
+#
+# See the sudoers man page for the details on how to write a sudoers file.
+#
+
+# Defaults specification
+Defaults env_keep +="DESTDIR FETCH_CMD FLAVOR FTPMODE MAKE MULTI_PACKAGES OKAY_FILES PKG_DBDIR PKG_DESTDIR PKG_CACHE PKG_PATH PKG_TMPDIR PORTSDIR RELEASEDIR SUBPACKAGE"
+
+# Uncomment to preserve the environment for users in group wheel
+#Defaults:%wheel !env_reset
+
+# User privilege specification
+root	ALL=(ALL) SETENV: ALL
+
+# Uncomment to allow people in group wheel to run all commands
+%wheel	ALL=(ALL) SETENV: ALL
+
+# Same thing without a password
+# %wheel	ALL=(ALL)	NOPASSWD: ALL
+
+# Chopstix users may mount floppy
+%chopstix	ALL=NOPASSWD:/sbin/mount /mnt/cdrom,/sbin/umount /mnt/cdrom
+%chopstix	ALL=NOPASSWD:/sbin/mount /mnt/floppy,/sbin/umount /mnt/floppy
+%chopstix	ALL=NOPASSWD:/sbin/mount /mnt/usb,/sbin/umount /mnt/usb
+%chopstix	ALL=NOPASSWD:/sbin/newfs_msdos -L * -O * fd*

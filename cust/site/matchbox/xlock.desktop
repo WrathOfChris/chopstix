@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Lock Display
+Comment=Lock Display
+Exec=xlock
+Type=Application
+Icon=minisys.png
+X-MB-NoWindow=true
+Categories=System

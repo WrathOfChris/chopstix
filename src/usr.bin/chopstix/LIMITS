@@ -1,0 +1,14 @@
+# $Gateweaver: LIMITS,v 1.3 2005/12/05 19:06:58 cmaxwell Exp $
+#
+# Known limitations within Chopstix
+
+- Phone extension can be a maximum of 5 digits
+- If order exceeds $999.99, subtotal labels will not line up
+- Maximum dollar value for any item or total is $21,474,836.47
+- Fractional accounting of pennies does not happen
+- Only North-American telephone numbers are permitted
+- 250 on-screen rows maximum
+- 4K order item maximum
+- 64 subitems per item maximum
+- printer errors allow a posted order to be modified and reprinted without
+  updating the database

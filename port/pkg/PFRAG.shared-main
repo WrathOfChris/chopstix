@@ -1,0 +1,4 @@
+@comment $OpenBSD$
+@lib lib/libchopstix.so.${LIBchopstix_VERSION}
+@lib lib/libchopstix_sql.so.${LIBchopstix_sql_VERSION}
+@lib lib/librules.so.${LIBrules_VERSION}

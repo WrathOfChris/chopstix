@@ -1,0 +1,15 @@
+<!-- $Gateweaver: menu.html,v 1.1 2007/10/09 18:44:27 cmaxwell Exp $ -->
+<p><h4>Navigate</h4>
+<ul><form method="get" action="%%BASEURL%%">
+	<input type="hidden" name="action" value="search">
+	<input type="hidden" name="mode" value="%%MODE%%">
+	<input type="hidden" name="thres" value="%%THRES%%">
+	<i>%%USERGROUP%%</i>
+	<li><a href="%%BASEURL%%?action=front%%URLOPTS%%" title="Front">Front</a></li>
+	<li><a href="%%BASEURL%%?action=submit%%URLOPTS%%" title="Add Story">Add Story</a></li>
+	<li><a href="%%BASEURL%%?action=search&amp;sort=time%%URLOPTS%%" title="Archives">Archives</a></li>
+	<li><a href="%%BASEURL%%?action=about%%URLOPTS%%" title="About">About</a></li>
+	%%USERNAVBAR%%
+	<input type="text" name="query" value="" size="15">
+	<input type="submit" value="Search">
+</form></ul></p>

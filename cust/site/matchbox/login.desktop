@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Login Shell
+Comment=Login Shell
+Exec=rxvt -bg black -fg white -cr 9 -pr 10 -fn -*-neep-*-*-*-*-*-140-*-*-*-*-*-* -tn xterm-color -sr -title Login -e mb-chopstix-exec login
+Type=Application
+Icon=mbterm.png
+Categories=System

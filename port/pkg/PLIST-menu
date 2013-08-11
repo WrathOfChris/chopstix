@@ -1,0 +1,19 @@
+@comment $OpenBSD$
+ChopstixLogo.gif
+edit.html
+edit_extra.html
+edit_style.html
+edit_subitem.html
+footer.html
+front.html
+header.html
+info.html
+item.html
+item_extra.html
+item_style.html
+item_subitem.html
+list.html
+menu.cgi
+menu.conf
+menu.css
+menu_print.css

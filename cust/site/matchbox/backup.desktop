@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Backup
+Comment=Backup Chopstix
+Exec=rxvt -bg black -fg white -cr 9 -pr 10 -fn -*-neep-*-*-*-*-*-140-*-*-*-*-*-* -tn xterm-color -sr -title Backup -e mb-chopstix-exec chopstix-backup
+Type=Application
+Icon=mbterm.png
+Categories=System

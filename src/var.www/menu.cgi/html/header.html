@@ -1,0 +1,45 @@
+<!-- $Gateweaver: header.html,v 1.7 2007/09/27 01:46:04 cmaxwell Exp $ -->
+<div id="left">
+<img class="logo" src="%%BASEURL%%?action=logo">
+<div id="menu">
+<h4>%%TITLE%%</h4>
+<ul>
+	<li><a href="%%BASEURL%%">Home</a></li>
+	<li><a href="%%BASEURL%%?%%QUERY%%&amp;display=print" target="_blank">
+		Print</a></li>
+</ul>
+<h4>Menu</h4>
+<ul>
+	<li><a href="%%BASEURL%%?action=list">
+		List</a></li>
+	<li><a href="%%BASEURL%%?action=info&amp;menucode=%%MENUCODE%%&amp;menugen=%%MENUGEN%%">
+		Info</a></li>
+	<li><a href="%%BASEURL%%?action=edit&amp;menucode=%%MENUCODE%%&amp;menugen=%%MENUGEN%%">
+		Edit</a></li>
+	<li><form action="%%BASEURL%%?action=editnew" method="post">
+		<input type="hidden" name="action" value="editnew">
+		<input type="hidden" name="menugen" value="0">
+		<table>
+		<tr><th scope="row">New:</td>
+			<td><input type="text" name="menucode" size="16" /></td></tr>
+		<tr><td></td>
+			<td><input type="submit" name="cmd" value="Create" /></td></tr>
+		</table>
+		</form>
+	</li>
+</ul>
+<h4>Code</h4>
+<ul>
+	<li><form action="%%BASEURL%%?action=%%ACTION%%" method="get">
+		<input type="hidden" name="action" value="%%ACTION%%">
+		<table>
+		<tr><th scope="row">Code:</td>
+			<td><input type="text" name="menucode" size="16" value="%%MENUCODE%%"/></td></tr>
+		<tr><td></td>
+			<td><input type="submit" value="Submit" /></td></tr>
+		</table>
+		</form>
+	</li>
+</ul>
+</div>
+</div>

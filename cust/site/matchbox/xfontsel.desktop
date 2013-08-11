@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Font Selector
+Comment=Font Selector
+Exec=xfontsel
+Type=Application
+Icon=mbnoapp.png
+Categories=Other

@@ -1,0 +1,13 @@
+#!/bin/sh
+# $Gateweaver: mb-chopstix-exec,v 1.1 2007/09/29 15:02:25 cmaxwell Exp $
+
+# Terminals get confused by matchbox fullscreen
+eval `resize`
+
+# Ensure that if the command fails, the user gets to see the error
+$@
+if [ $? = 1 ]; then
+	echo
+	echo "Press ENTER to continue..."
+	read
+fi

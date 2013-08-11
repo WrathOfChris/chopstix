@@ -1,0 +1,192 @@
+-- $Gateweaver: chopstix.asn1,v 1.28 2007/09/25 14:21:20 cmaxwell Exp $
+
+CHOPSTIX DEFINITIONS ::= BEGIN
+
+CHOPSTIX-PAYMENTTYPE ::= INTEGER {
+	PAYMENT_NONE(0),
+	PAYMENT_CASH(1),
+	PAYMENT_CREDIT(2),
+	PAYMENT_VOID(3),
+	PAYMENT_DEBIT(4),
+	PAYMENT_CHEQUE(5),
+	PAYMENT_OTHER(6)
+}
+
+CHOPSTIX-ORDERTYPE ::= INTEGER {
+	ORDER_NONE(0),
+	ORDER_PICKUP(1),
+	ORDER_DELIVERY(2),
+	ORDER_WALKIN(3),
+	ORDER_VOID(4)
+}
+
+CHOPSTIX-CARDTYPE ::= INTEGER {
+	CARD_OTHER(0),
+	CARD_VISA(1),
+	CARD_MASTERCARD(2)
+}
+
+CHOPSTIX-ITEMTYPE ::= INTEGER {
+	ITEM_NORMAL(0),
+	ITEM_SUBITEM(1),
+	ITEM_EXTRA(2),
+	ITEM_RULE(3)
+}
+
+CHOPSTIX-DISCOUNTTYPE ::= INTEGER {
+	DISCOUNT_NONE(0),
+	DISCOUNT_DOLLAR(1),
+	DISCOUNT_PERCENT(2),
+	DISCOUNT_RULE(3)
+}
+
+ChopstixFlags ::= BIT STRING {
+	deleted(0)
+}
+
+ChopstixTime ::= GeneralizedTime		-- Stores in UTC (Z)ulu
+ChopstixStreet ::= GeneralString
+ChopstixName ::= GeneralString
+ChopstixSpecial ::= GeneralString
+
+-- (NPA) NXX-NUM xEXT
+ChopstixPhone ::= SEQUENCE {
+	npa[0]			INTEGER,			-- Numbering Plan Area code
+	nxx[1]			INTEGER,			-- Numbering Prefix (exchange)
+	num[2]			INTEGER,
+	ext[3]			INTEGER OPTIONAL
+}
+
+ChopstixAddress ::= SEQUENCE {
+	addr[0]			GeneralString,
+	apt[1]			GeneralString,		-- apartment number
+	entry[2]		GeneralString		-- entry code
+}
+
+ChopstixIntersect ::= SEQUENCE {
+	cross[0]		GeneralString
+}
+
+ChopstixCredit ::= SEQUENCE {
+	credit[0]		INTEGER,			-- original credit given
+	remain[1]		INTEGER,			-- amount remaining
+	reason[2]		GeneralString		-- why issued
+}
+ChopstixCredits ::= SEQUENCE OF ChopstixCredit
+
+ChopstixCustomer ::= SEQUENCE {
+	phone[0]		ChopstixPhone,
+	name[1]			ChopstixName,
+	addr[2]			ChopstixAddress,
+	isect[3]		ChopstixIntersect,
+	reps[4]			INTEGER,
+	special[5]		ChopstixSpecial OPTIONAL,
+	credit[6]		ChopstixCredits OPTIONAL
+}
+
+ChopstixCreditNumber ::= GeneralString
+
+--	ChopstixCreditExpiry ::= SEQUENCE {
+--		month[0]		INTEGER,
+--		year[1]			INTEGER
+--	}
+-- Change this later
+ChopstixCreditExpiry ::= GeneralString
+
+ChopstixCreditInfo ::= SEQUENCE {
+	type[0]			CHOPSTIX-CARDTYPE,
+	number[1]		ChopstixCreditNumber,
+	expiry[2]		ChopstixCreditExpiry
+}
+
+ChopstixPayment ::= SEQUENCE {
+	type[0]			CHOPSTIX-PAYMENTTYPE,
+	ccinfo[1]		ChopstixCreditInfo OPTIONAL
+}
+
+ChopstixTotal ::= SEQUENCE {
+	subtotal[0]		INTEGER,
+	discount[1]		INTEGER,			-- override discount
+	disctype[2]		CHOPSTIX-DISCOUNTTYPE,	-- money or percentage
+	delivery[3]		INTEGER,			-- delivery charge if applicable
+	delitype[4]		CHOPSTIX-DISCOUNTTYPE,	-- money or percentage
+	credit[5]		INTEGER,			-- credit applied to order
+	tax1[6]			INTEGER,
+	tax2[7]			INTEGER,
+	total[8]		INTEGER
+}
+
+ChopstixItemCode ::= GeneralString
+
+ChopstixItemStyle ::= SEQUENCE {
+	num[0]			INTEGER,			-- unique ID number, for recalled order
+	name[1]			GeneralString		-- note to print below item
+}
+ChopstixItemStyles ::= SEQUENCE OF ChopstixItemStyle
+
+ChopstixItemExtra ::= SEQUENCE {
+	qty[0]			INTEGER,			-- number to include per item
+	code[1]			ChopstixItemCode	-- menu code to reference
+}
+ChopstixItemExtras ::= SEQUENCE OF ChopstixItemExtra
+
+ChopstixSubItem ::= SEQUENCE {
+	qty[0]			INTEGER,
+	code[1]			ChopstixItemCode,
+	style[2]		INTEGER,
+	pricedelta[3]	INTEGER,			-- delta price change of entire item
+	special[4]		ChopstixSpecial OPTIONAL
+}
+ChopstixSubItems ::= SEQUENCE OF ChopstixSubItem
+
+ChopstixMenuitem ::= SEQUENCE {
+	gen[0]			INTEGER,			-- menu generation number
+	code[1]			ChopstixItemCode,	-- menu code
+	name[2]			GeneralString,		-- item name
+	price[4]		INTEGER,			-- fixedpoint fp
+	styles[5]		ChopstixItemStyles,	-- beef, pork, etc
+	extras[6]		ChopstixItemExtras,	-- condiment extras
+	subitems[7]		ChopstixItemExtras OPTIONAL,	-- for combos, sauces
+	flags[8]		ChopstixFlags
+}
+ChopstixMenu ::= SEQUENCE OF ChopstixMenuitem
+
+--
+-- Receipt header information
+--
+ChopstixHeader ::= SEQUENCE {
+	company[0]		ChopstixName,
+	addr[1]			ChopstixAddress,
+	phone[2]		ChopstixPhone,
+	city[3]			GeneralString,
+	province[4]		GeneralString,
+	country[5]		GeneralString
+}
+
+ChopstixOrderItem ::= SEQUENCE {
+	type[0]			CHOPSTIX-ITEMTYPE,
+	qty[1]			INTEGER,
+	code[2]			ChopstixItemCode,
+	style[3]		INTEGER,					-- style from menu styles
+	special[4]		ChopstixSpecial OPTIONAL,	-- per item instructions
+	subitems[5]		ChopstixSubItems OPTIONAL	-- copy of menu subitems w/delta
+}
+ChopstixOrderItems ::= SEQUENCE OF ChopstixOrderItem
+
+ChopstixOrderKey ::= INTEGER
+
+-- Abuse the application tag to indicate version changes
+ChopstixOrder ::= [APPLICATION 1] SEQUENCE {
+	key[0]			ChopstixOrderKey,	-- order number/rev
+	date[1]			ChopstixTime,		-- order posting date
+	customer[2]		ChopstixCustomer,
+	type[3]			CHOPSTIX-ORDERTYPE,
+	payment[4]		ChopstixPayment,
+	items[5]		ChopstixOrderItems,
+	special[6]		ChopstixSpecial,
+	ruleitems[7]	ChopstixOrderItems,
+	total[8]		ChopstixTotal
+}
+ChopstixOrders ::= SEQUENCE OF ChopstixOrder
+
+END

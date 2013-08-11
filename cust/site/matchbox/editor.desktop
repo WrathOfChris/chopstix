@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Editor
+Comment=Text Editor
+Exec=leafpad
+Type=Application
+Icon=leafpad.png
+Categories=Applications

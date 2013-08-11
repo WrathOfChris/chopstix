@@ -1,0 +1,231 @@
+#!/bin/sh
+# $Gateweaver: chopstix-backup,v 1.1 2007/09/29 15:06:00 cmaxwell Exp $
+
+resp=
+FLOPPY=/mnt/floppy
+CDROM=/mnt/cdrom
+USB=/mnt/usb
+CHOPSTIX=/var/db/chopstix/chopstix.db
+MOUNT=
+
+abort() {
+	echo
+	echo "****************************************"
+	echo "* ERROR!                               *"
+	echo "****************************************"
+	ask_yn "Type no to quit, yes to carry on in the face of danger"
+	[[ $resp == n ]] && exit
+}
+
+trap "abort" 2
+trap "abort" 3
+
+# Ask for user input.
+#
+#    $1    = the question to ask the user
+#    $2    = the default answer
+#
+# Save the user input (or the default) in $resp.
+#
+# Allow the user to escape to shells ('!') or execute commands
+# ('!foo') before entering the input.
+ask() {
+	local _question=$1 _default=$2
+
+	set -o noglob
+	while :; do
+		echo -n "$_question "
+		[[ -z $_default ]] || echo -n "[$_default] "
+		read resp
+		case $resp in
+		!)	echo "Type 'exit' to return."
+			sh
+			;;
+		!*) eval ${resp#?}
+			;;
+		*)	: ${resp:=$_default}
+			break;
+			;;
+		esac
+	done
+	set +o noglob
+}
+
+# Ask for user input until a non-empty reply is entered.
+#
+#    $1    = the question to ask the user
+#    $2    = the default answer
+#
+# Save the user input (or the default) in $resp.
+ask_until() {
+	resp=
+	while [[ -z $resp ]]; do
+		ask "$1" "$2"
+	done
+}
+
+# Ask the user for a y or n, and insist on 'y', 'yes', 'n' or 'no'.
+#
+#    $1    = the question to ask the user
+#    $2    = the default answer (assumed to be 'n' if empty).
+#
+# Return 'y' or 'n' in $resp.
+ask_yn() {
+	local _q=$1 _a=${2:-no} _resp
+	typeset -l _resp
+
+	while :; do
+		ask "$_q" "$_a"
+		_resp=$resp
+		case $_resp in
+		y|yes)	resp=y ; return ;;
+		n|no)	resp=n ; return ;;
+		esac
+	done
+}
+
+# Ask for the user to select one value from a list, or 'done'.
+#
+# $1 = name of the list items (disk, cd, etc.)
+# $2 = question to ask
+# $3 = list of valid choices
+# $4 = default choice, if it is not specified use the first item in $3
+# $5 = error message if no items in $3, defaults to 'No $1s found.'
+#
+# At exit $resp holds selected item, or 'done'
+ask_which() {
+	local _name=$1 _query=$2 _list=$3 _def=$4 _err=$5
+
+	set -- $_list
+	if [ -z "$_list" ]; then
+		echo "${_err:=No ${_name}s found}."
+		resp=done
+		return
+	fi
+	: ${_def:=$1}
+
+	# Eliminate extraneous (especially trailing) whitespace in _list.
+	_list="$*"
+
+	while :; do
+		# Put both lines in ask prompt, rather than use a
+		# separate 'echo' to ensure the entire question is
+		# re-ask'ed after a '!' or '!foo' shell escape.
+		ask "Available ${_name}s are: $_list.\nWhich one $_query? (or 'done')" "$_def"
+
+		# Quote $resp to prevent user from confusing isin() by
+		# entering something like 'a a'.
+		isin "$resp" $_list done && break
+		echo "'$resp' is not a valid choice."
+	done
+}
+
+# test the first argument against the remaining ones, return success on a match
+isin() {
+	local	_a=$1 _b
+
+	shift
+	for _b; do
+		[[ $_a == $_b ]] && return 0
+	done
+	return 1
+}
+
+# get_mountdev mountpoint
+get_mountdev() {
+	local _dev _mp _fstype _opt _rest _mount=$1
+	
+	while read _dev _mp _fstype _opt _rest; do
+		[[ $_mp != $_mount ]] && continue
+		echo $_dev
+		break
+	done </etc/fstab
+}
+
+floppybackup() {
+	local _dev _mount _floppy
+
+	ask "Floppy disk to use?" "${FLOPPY}"
+	_mount=$resp
+	_dev=$(get_mountdev $_mount)
+	_floppy=$(echo `basename $_dev` | sed 's/[a-z]$/c/')
+
+	echo "using floppy $_floppy device $_dev..."
+
+	ask_yn "Format the disk?" n
+	if [ $resp = y ]; then
+		sudo newfs_msdos -L CHOPSTIXBAK -O CHOPSTIX $_floppy || abort
+	fi
+
+	echo "Insert a formatted disk into the floppy drive"
+	ask_yn "ready?"
+
+	sudo mount $_mount || abort
+	MOUNT=$_mount
+	BACKUPDIR=$_mount
+
+	dobackup $MOUNT
+}
+
+hdbackup() {
+	ask "Select backup directory" "$HOME/backup"
+	BACKUPDIR=$resp
+
+	dobackup ${BACKUPDIR}
+}
+
+usbbackup() {
+	local _mount
+
+	ask "USB drive to use?" "$USB"
+	_mount=$resp
+	
+	sudo mount $_mount || abort
+	MOUNT=$_mount
+
+	ask "Select backup directory" "$_mount"
+	BACKUPDIR=$resp
+
+	dobackup ${BACKUPDIR}
+}
+
+dobackup() {
+	DATETIME=`date +%F.%T | sed "s/:/\./g"`
+	BACKUPFILE=$1/chopstix_backup.${DATETIME}.gz
+
+	[[ ! -d $1 ]] && mkdir $1
+
+	sqlite3 ${CHOPSTIX} .dump | gzip > ${BACKUPFILE}
+
+	echo
+	echo -n "This backup is called:\t"
+	ls ${BACKUPFILE}
+}
+
+#
+# BEGIN
+#
+
+ask_which "device" "do you wish to backup onto" "floppy disk usb" \
+	"" ""
+[[ $resp == done ]] && exit
+[[ $resp == floppy ]] && floppybackup 
+[[ $resp == disk ]] && hdbackup
+[[ $resp == usb ]] && usbbackup
+
+echo
+echo Last 10 backups:
+ls ${BACKUPDIR} | tail -n 10
+
+echo
+echo Total Backups size:
+du -hs ${BACKUPDIR}
+
+echo
+echo Disk utilization on backup:
+df -h ${BACKUPDIR}
+
+echo
+ask_yn "Done?"
+
+[[ -n $MOUNT ]] && sudo umount $MOUNT

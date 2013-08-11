@@ -1,0 +1,5 @@
+# $Gateweaver: rc.conf.local,v 1.2 2007/09/10 20:33:16 cmaxwell Exp $
+ntpd_flags=NO		# for normal use: ""
+lpd_flags=""		# for normal use: "" (or "-l" for debugging)
+httpd_flags="-u -DSSL"	# for normal use: "" (or "-DSSL" after reading ssl(8))
+xdm_flags=""		# for normal use: ""

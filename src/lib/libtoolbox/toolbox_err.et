@@ -1,0 +1,29 @@
+#
+# Error messages for the asn.1 library
+#
+# This might look like a com_err file, but is not
+#
+id "$Gateweaver: toolbox_err.et,v 1.1 2007/09/04 14:54:35 cmaxwell Exp $"
+
+error_table tbox
+prefix TBOX
+error_code NONE,			"no error"
+error_code API_INVALID,		"invalid API call"
+error_code TRUNCATED,		"truncated string"
+error_code NOMEM,			"out of memory"
+error_code RANGE,			"position out of range"
+error_code NOTFOUND,		"not found"
+error_code EXISTS,			"item already exists"
+error_code BADFORMAT,		"bad format"
+
+index 64
+prefix TBEVENT
+error_code BLOCKDONE,		"completed action"
+error_code CALLBACK,		"wait for callback"
+error_code FINISH,			"heading to finish"
+
+index 128
+prefix
+error_code TBOX_ERR_RCSID,	"$Gateweaver: toolbox_err.et,v 1.1 2007/09/04 14:54:35 cmaxwell Exp $"
+
+end

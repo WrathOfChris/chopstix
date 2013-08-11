@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Menu Manager
+Comment=Chopstix Menu Manager
+Exec=konq-e http://%%HOSTNAME%%/chopstix/menu.cgi
+Icon=mbnoapp.png
+Type=Application
+Categories=Reports

@@ -1,0 +1,10 @@
+To finish the install of report:
+
+ScriptAlias /chopstix/report.cgi "/var/www/chopstix/report/report.cgi"
+<Directory "/var/www/chopstix/report">
+	Options ExecCGI
+	AllowOverride AuthConfig
+	Order allow,deny
+	Allow from all
+</Directory>
+

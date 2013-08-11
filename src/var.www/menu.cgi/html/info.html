@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- $Gateweaver: info.html,v 1.4 2007/09/27 01:49:01 cmaxwell Exp $ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>%%TITLE%%</title>
+	<link rel="stylesheet" type="text/css" href="%%BASECSS%%" />
+</head>
+
+<body>
+
+<div id="main">
+%%HEADER%%
+
+<div class="outer"><div class="inner"><div class="float-wrap"><div id="content">
+
+<h3>%%ITEMCODE%% %%ITEMNAME%%</h3>
+<table class="list">
+
+<tr><th scope="row"><b>Code</b></th>
+	<td><a href="%%BASEURL%%?action=edit&amp;menucode=%%ITEMCODE%%&amp;menugen=%%ITEMGEN%%">
+		%%ITEMCODE%%</td></a></tr>
+<tr><th scope="row"><b>Generation</b></th>
+	<td>%%ITEMGEN%%</td></tr>
+<tr><th scope="row"><b>Status</b></th>
+	<td>%%ITEMFLAGS%%</td></tr>
+<tr><th scope="row"><b>Name</b></th>
+	<td>%%ITEMNAME%%</td></tr>
+<tr><th scope="row"><b>Price</b></th>
+	<td>%%ITEMPRICE%%</td></tr>
+<tr><th scope="row"><b>Styles</b></th>
+	<td>%%ITEMSTYLES%%</td></tr>
+<tr><th scope="row"><b>Extras</b></th>
+	<td>%%ITEMEXTRAS%%</td></tr>
+<tr><th scope="row"><b>Subitems</b></th>
+	<td>%%ITEMSUBITEMS%%</td></tr>
+
+</table>
+</div></div></div></div>
+</div>
+
+%%FOOTER%%
+
+</body>
+</html>

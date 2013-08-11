@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Shutdown
+Comment=Shutdown System
+Exec=rxvt -bg black -fg white -cr 9 -pr 10 -fn -*-neep-*-*-*-*-*-140-*-*-*-*-*-* -tn xterm-color -sr -title Shutdown -e mb-chopstix-exec shutdown -h now
+Type=Application
+Icon=minisys.png
+Categories=System

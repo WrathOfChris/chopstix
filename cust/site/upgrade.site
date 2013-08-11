@@ -1,0 +1,93 @@
+#!/bin/sh
+# $Gateweaver: upgrade.site,v 1.5 2008/01/21 21:30:20 cmaxwell Exp $
+# Copyright (c) 2007 Christopher Maxwell.  All rights reserved.
+#
+# SQL:
+# ALTER TABLE orders ADD COLUMN "Credit" INTEGER;
+# ALTER TABLE menuitems ADD COLUMN "Deleted" INTEGER;
+# CREATE INDEX credits_CID ON credits ( CID );
+# CREATE INDEX menuitems_Code ON menuitems ( Code );
+# CREATE INDEX menustyles_MID ON menustyles ( MID );
+# CREATE INDEX menuextras_MID ON menuextras ( MID );
+# CREATE INDEX menusubitems_MID ON menusubitems ( MID );
+# CREATE INDEX orders_CID ON orders ( CID );
+# CREATE INDEX orderitems_OID ON orderitems ( OID );
+# CREATE INDEX orderitems_MID ON orderitems ( MID );
+# CREATE INDEX orderitems_Date ON orderitems ( Date );
+# CREATE INDEX orderccpayments_OID ON orderccpayments ( OID );
+echo Upgrading Chopstix v1.0 database...
+
+[[ -z $OLD ]] && OLD=/var/db/chopstix/chopstix.db
+[[ -z $NEW ]] && NEW=/var/db/chopstix/chopstix.db.new
+[[ -z $SCHEMA ]] && SCHEMA=/var/db/chopstix/chopstix.sql
+
+[[ -f $OLD ]] || { echo "Database $OLD does not exist"; exit 1; }
+[[ -f $NEW ]] && { echo "Database $NEW already exists"; exit 1; }
+[[ -f $SCHEMA ]] || { echo "Schema $SCHEMA does not exist"; exit 1; }
+
+echo ".quit" | sqlite3 -batch -init $SCHEMA $NEW
+sqlite3 -batch $NEW "DELETE FROM menuextras;"
+sqlite3 -batch $NEW "DELETE FROM menustyles;"
+sqlite3 -batch $NEW "DELETE FROM menusubitems;"
+sqlite3 -batch $NEW "DELETE FROM menuitems;"
+sqlite3 -batch $NEW "DELETE FROM sqlite_sequence;"
+
+echo "Updating customers..."
+sqlite3 -batch $OLD ".dump customers" | \
+	grep -e ^BEGIN -e ^INSERT -e ^COMMIT | \
+	sqlite3 -batch $NEW
+[[ $? == 0 ]] || exit 1
+
+echo "Updating credits..."
+sqlite3 -batch $OLD ".dump credits" | \
+	grep -e ^BEGIN -e ^INSERT -e ^COMMIT | \
+	sqlite3 -batch $NEW
+[[ $? == 0 ]] || exit 1
+
+# ALTER TABLE menuitems ADD COLUMN "Deleted" INTEGER;
+echo "Updating menuitems..."
+sqlite3 -batch $OLD ".dump menuitems" | \
+	grep -e ^BEGIN -e ^INSERT -e ^COMMIT | \
+	sed 's/);$/,0);/g' | \
+	sqlite3 -batch $NEW
+[[ $? == 0 ]] || exit 1
+
+echo "Updating menustyles..."
+sqlite3 -batch $OLD ".dump menustyles" | \
+	grep -e ^BEGIN -e ^INSERT -e ^COMMIT | \
+	sqlite3 -batch $NEW
+[[ $? == 0 ]] || exit 1
+
+echo "Updating menuextras..."
+sqlite3 -batch $OLD ".dump menuextras" | \
+	grep -e ^BEGIN -e ^INSERT -e ^COMMIT | \
+	sqlite3 -batch $NEW
+[[ $? == 0 ]] || exit 1
+
+echo "Updating menusubitems..."
+sqlite3 -batch $OLD ".dump menusubitems" | \
+	grep -e ^BEGIN -e ^INSERT -e ^COMMIT | \
+	sqlite3 -batch $NEW
+[[ $? == 0 ]] || exit 1
+
+# ALTER TABLE orders ADD COLUMN "Credit" INTEGER;
+echo "Updating orders..."
+sqlite3 -batch $OLD ".dump orders" | \
+	grep -e ^BEGIN -e ^INSERT -e ^COMMIT | \
+	awk -F, '/^INSERT/ {OFS=","; $10 = "0,"$10; print;}' |\
+	sqlite3 -batch $NEW
+[[ $? == 0 ]] || exit 1
+
+echo "Updating orderitems..."
+sqlite3 -batch $OLD ".dump orderitems" | \
+	grep -e ^BEGIN -e ^INSERT -e ^COMMIT | \
+	sqlite3 -batch $NEW
+[[ $? == 0 ]] || exit 1
+
+echo "Updating orderccpayments..."
+sqlite3 -batch $OLD ".dump orderccpayments" | \
+	grep -e ^BEGIN -e ^INSERT -e ^COMMIT | \
+	sqlite3 -batch $NEW
+[[ $? == 0 ]] || exit 1
+
+echo "Database update complete."

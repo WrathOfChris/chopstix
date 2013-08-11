@@ -1,0 +1,54 @@
+<!-- $Gateweaver: header.html,v 1.9 2007/09/25 20:02:27 cmaxwell Exp $ -->
+<div id="left">
+<img class="logo" src="%%BASEURL%%?action=logo">
+<div id="menu">
+<h4>%%TITLE%%</h4>
+<ul>
+	<li><a href="%%BASEURL%%">Home</a></li>
+	<li><a href="%%BASEURL%%?%%QUERY%%&amp;display=print" target="_blank">
+		Print</a></li>
+</ul>
+<h4>Reports</h4>
+<ul>
+	<li><a href="%%BASEURL%%?action=orders&amp;start=%%TIMESTART%%&amp;stop=%%TIMESTOP%%">
+		Orders</a></li>
+	<li><a href="%%BASEURL%%?action=payments&amp;start=%%TIMESTART%%&amp;stop=%%TIMESTOP%%">
+		Payments</a></li>
+	<li><a href="%%BASEURL%%?action=items&amp;start=%%TIMESTART%%&amp;stop=%%TIMESTOP%%">
+		Menu Items</a></li>
+	<li><a href="%%BASEURL%%?action=customers&amp;start=%%TIMESTART%%&amp;stop=%%TIMESTOP%%">
+		Customers</a></li>
+</ul>
+<h4>Range</h4>
+<ul>
+	<li><a href="%%BASEURL%%?action=%%ACTION%%&start=%%TIMETODAY%%&stop=%%TIMETOMORROW%%">
+		Today</a></li>
+	<li><a href="%%BASEURL%%?action=%%ACTION%%&start=%%TIMEYESTERDAY%%&stop=%%TIMETODAY%%">
+		Yesterday</a></li>
+	<li><a href="%%BASEURL%%?action=%%ACTION%%&start=%%TIMETHISWEEK%%&stop=%%TIMETOMORROW%%">
+		This Week</a></li>
+	<li><a href="%%BASEURL%%?action=%%ACTION%%&start=%%TIMETHISMONTH%%&stop=%%TIMETOMORROW%%">
+		This Month</a></li>
+	<li><a href="%%BASEURL%%?action=%%ACTION%%&start=%%TIMETHISYEAR%%&stop=%%TIMETOMORROW%%">
+		This Year</a></li>
+	<li><a href="%%BASEURL%%?action=%%ACTION%%&start=%%TIMELASTWEEK%%&stop=%%TIMETHISWEEK%%">
+		Last Week</a></li>
+	<li><a href="%%BASEURL%%?action=%%ACTION%%&start=%%TIMELASTMONTH%%&stop=%%TIMETHISMONTH%%">
+		Last Month</a></li>
+	<li><a href="%%BASEURL%%?action=%%ACTION%%&start=%%TIMELASTYEAR%%&stop=%%TIMETHISYEAR%%">
+		Last Year</a></li>
+	<li><form action="%%BASEURL%%?action=%%ACTION%%" method="get">
+		<input type="hidden" name="action" value="%%ACTION%%">
+		<table>
+		<tr><th scope="row">Start:</td>
+			<td><input type="text" name="start" size="16" value="%%TIMESTART%%"/></td>
+		<tr><th scope="row">Stop:</td>
+			<td><input type="text" name="stop" size="16" value="%%TIMESTOP%%" /></td>
+		<tr><td></td>
+			<td><input type="submit" value="Submit" /></td>
+		</table>
+		</form>
+	</li>
+</ul>
+</div>
+</div>

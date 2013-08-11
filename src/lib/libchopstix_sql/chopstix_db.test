@@ -1,0 +1,129 @@
+--
+-- CUSTOMERS
+--
+INSERT INTO customers (Phone, Name, Address, Apt, Intersection, Special)
+	VALUES ('9051000000', 'John Smith', '2 Main St', '104',
+			'Main & First', 'lala');
+INSERT INTO customers (Phone, Name, Address)
+	VALUES ('9050000000', 'CASH', '');
+
+--
+-- CREDITS
+--
+INSERT INTO credits (CID, Credit, Remain, Reason)
+	SELECT ID, '0', '0', 'poor' FROM customers
+		WHERE customers.Phone = '9051000000';
+
+INSERT INTO credits (CID, Credit, Remain, Reason)
+	SELECT ID, '0', '0', 'angry' FROM customers
+		WHERE customers.Phone = '9051000000';
+
+--
+-- MENUITEMS
+--
+INSERT INTO menuitems (Code, Generation, Name, Price)
+	VALUES ('1', '0', 'Egg Roll','100');
+INSERT INTO menuitems (Code, Generation, Name, Price)
+	VALUES ('2', '0', 'Spring Roll', '165');
+INSERT INTO menuitems (Code, Generation, Name, Price)
+	VALUES ('3', '0', 'Moo Shu', '899');
+INSERT INTO menuitems (Code, Generation, Name, Price)
+	VALUES ('9901', '0', 'Plum Sauce Sachet', '0');
+INSERT INTO menuitems (Code, Generation, Name, Price)
+	VALUES ('4', '0', 'Flied Rice', '799');
+INSERT INTO menuitems (Code, Generation, Name, Price)
+	VALUES ('5', '0', 'Combo 1', '2399');
+INSERT INTO menuitems (Code, Generation, Name, Price)
+	VALUES ('21', '0', 'Crispy Chicken Wings', '799');
+INSERT INTO menuitems (Code, Generation, Name, Price)
+	VALUES ('609', '0', 'Fortune Cookie', '0');
+
+--
+-- MENUEXTRAS
+--
+INSERT INTO menuextras (MID, Qty, Code)
+	SELECT ID, '2', '9901' FROM menuitems
+	WHERE menuitems.Code = '2';
+
+--
+-- MENUSTYLES
+--
+INSERT INTO menustyles (MID, Style)
+	SELECT ID, 'Chicken' FROM menuitems
+	WHERE menuitems.Code = '3';
+INSERT INTO menustyles (MID, Style)
+	SELECT ID, 'Beef' FROM menuitems
+	WHERE menuitems.Code = '3';
+INSERT INTO menustyles (MID, Style)
+	SELECT ID, 'Pork' FROM menuitems
+	WHERE menuitems.Code = '3';
+INSERT INTO menustyles (MID, Style)
+	SELECT ID, 'Chicken' FROM menuitems
+	WHERE menuitems.Code = '4';
+INSERT INTO menustyles (MID, Style)
+	SELECT ID, 'Beef' FROM menuitems
+	WHERE menuitems.Code = '4';
+
+--
+-- MENUSUBITEMS
+--
+INSERT INTO menusubitems (MID, Qty, Code)
+	SELECT ID, '1', '1' FROM menuitems
+	WHERE menuitems.code = '5';
+INSERT INTO menusubitems (MID, Qty, Code)
+	SELECT ID, '1', '2' FROM menuitems
+	WHERE menuitems.code = '5';
+INSERT INTO menusubitems (MID, Qty, Code)
+	SELECT ID, '1', '3' FROM menuitems
+	WHERE menuitems.code = '5';
+
+--
+-- ORDERS
+--
+BEGIN TRANSACTION;
+INSERT INTO orders (CID, Type, Special, Paytype, Subtotal, Discount,
+		Delivery, Tax1, Tax2, Total)
+	SELECT ID, '1', NULL, '1', '100', '0', '0', '0', '0', '100'
+	FROM customers WHERE customers.Phone = '9051000000' LIMIT 1;
+-- I:1xEgg Roll
+INSERT INTO orderitems (OID, Line, Type, MID, Qty, Style, Price, Special)
+	SELECT last_insert_rowid(), '1', '0', menuitems.ID, '1', NULL, '100',
+		NULL FROM orders, menuitems WHERE menuitems.code = '1' LIMIT 1;
+COMMIT;
+
+-- XXX This uses manual OID override, since I haven't thought up a way to
+--     use last_insert_rowid() more than once.
+BEGIN TRANSACTION;
+INSERT INTO orders (CID, Type, Special, Paytype, Subtotal, Discount,
+		Delivery, Tax1, Tax2, Total)
+	SELECT ID, '2', NULL, '2', '5526', '0', '0', '553', '55', '6134'
+	FROM customers WHERE customers.Phone = '9051000000' LIMIT 1;
+-- I:1xEgg Roll
+INSERT INTO orderitems (OID, Line, Type, MID, Qty, Style, Price, Special)
+	SELECT last_insert_rowid(), '2', '0', menuitems.ID, '1', NULL, '100',
+		NULL FROM orders, menuitems WHERE menuitems.code = '1' LIMIT 1;
+-- I:2xSpring Roll
+INSERT INTO orderitems (OID, Line, Type, MID, Qty, Style, Price, Special)
+	SELECT '2', '1', '0', menuitems.ID, '2', NULL, '165',
+		NULL FROM orders, menuitems WHERE menuitems.code = '2' LIMIT 1;
+-- I:3xMoo Shu Chicken
+INSERT INTO orderitems (OID, Line, Type, MID, Qty, Style, Price, Special)
+	SELECT '2', '3', '0', menuitems.ID, '3', 'Chicken', '899',
+		NULL FROM orders, menuitems WHERE menuitems.code = '3' LIMIT 1;
+-- I:1xCombo 1
+INSERT INTO orderitems (OID, Line, Type, MID, Qty, Style, Price, Special)
+	SELECT '2', '4', '0', menuitems.ID, '1', NULL, '2399',
+		NULL FROM orders, menuitems WHERE menuitems.code = '5' LIMIT 1;
+	-- S:1xEgg Roll
+	INSERT INTO orderitems (OID, Line, Type, MID, Qty, Style, Price, Special)
+		SELECT '2', '4', '1', menuitems.ID, '1', NULL, '0',
+			NULL FROM orders, menuitems WHERE menuitems.code = '1' LIMIT 1;
+	-- S:1xSpring Roll
+	INSERT INTO orderitems (OID, Line, Type, MID, Qty, Style, Price, Special)
+		SELECT '2', '4', '1', menuitems.ID, '1', NULL, '0',
+			NULL FROM orders, menuitems WHERE menuitems.code = '2' LIMIT 1;
+	-- S:1xMoo Shu Pork
+	INSERT INTO orderitems (OID, Line, Type, MID, Qty, Style, Price, Special)
+		SELECT '2', '4', '1', menuitems.ID, '1', 'Pork', '0',
+			NULL FROM orders, menuitems WHERE menuitems.code = '3' LIMIT 1;
+COMMIT;

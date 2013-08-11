@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- $Gateweaver: item.html,v 1.2 2007/09/10 15:22:24 cmaxwell Exp $ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>%%TITLE%%</title>
+	<link rel="stylesheet" type="text/css" href="%%BASECSS%%" />
+</head>
+
+<body>
+
+<div id="main">
+%%HEADER%%
+
+<div class="outer"><div class="inner"><div class="float-wrap"><div id="content">
+<h2>Items %%TIMESTART%% - %%TIMESTOP%%</h2>
+<table class="list">
+
+<tr>
+	<th scope="col"><b>Quantity</b></th>
+	<th scope="col"><b>Code</b></th>
+	<th scope="col"><b>Description</b></th>
+	<th scope="col"><b>Price</b></th>
+	<th scope="col"><b>SubTotal</b></th>
+</tr>
+
+%%ROWRESET%%
+%%ITEMLIST%%
+
+</table>
+
+<h2>Rule Items %%TIMESTART%% - %%TIMESTOP%%</h2>
+<table class="list">
+
+<tr>
+	<th scope="col"><b>Quantity</b></th>
+	<th scope="col"><b>Code</b></th>
+	<th scope="col"><b>Description</b></th>
+	<th scope="col"><b>Price</b></th>
+	<th scope="col"><b>SubTotal</b></th>
+</tr>
+
+%%ROWRESET%%
+%%ITEMRULELIST%%
+
+</table>
+
+<h2>Sub Items %%TIMESTART%% - %%TIMESTOP%%</h2>
+<table class="list">
+
+<tr>
+	<th scope="col"><b>Quantity</b></th>
+	<th scope="col"><b>Code</b></th>
+	<th scope="col"><b>Description</b></th>
+	<th scope="col"><b>Price</b></th>
+	<th scope="col"><b>Delta</b></th>
+</tr>
+
+%%ROWRESET%%
+%%ITEMSUBLIST%%
+
+</table>
+</div></div></div></div>
+</div>
+
+%%FOOTER%%
+
+</body>
+</html>

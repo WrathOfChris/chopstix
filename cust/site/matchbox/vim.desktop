@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Vim
+Comment=Vim Text Editor
+Exec=gvim
+Type=Application
+Icon=mbnoapp.png
+Categories=System

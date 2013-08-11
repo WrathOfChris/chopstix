@@ -1,0 +1,116 @@
+/* $Gateweaver: report_print.css,v 1.4 2007/09/10 15:22:24 cmaxwell Exp $ */
+/*
+ * Copyright (c) 2007 Christopher Maxwell.  All rights reserved.
+ */
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+body, html  {
+	font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+	color: black;
+	background-color: white;
+	text-align: center;
+}
+
+img {
+	border: none;
+}
+
+a {
+	text-decoration: none;
+	border: none;
+	color: black;
+}
+
+#main {
+	margin: 0 auto;
+	text-align: left;
+}
+
+#left {
+	min-height: 70px;
+}
+
+#footer {
+	margin 0 auto;
+	font-size: 50%;
+	text-align: left;
+}
+
+#menu {
+	display: none;
+}
+
+.logo {
+	float: left;
+	padding: 0 5px 0 5px;
+	width: 140px;
+}
+
+.row0 {
+	background-color: #ffffff;
+}
+
+.row1 {
+	background-color: #e8e8e8;
+}
+
+/*
+ * LIST
+ */
+
+.list {
+	font-size: 70%;
+}
+
+table.list {
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+
+table.list th {
+	padding: 4px 4px 4px 4px;
+	color: #000000;
+	background-color: #c0c0c0;
+	text-align: left;
+}
+
+table.list td {
+	border: 1px solid #ffffff;
+	color: #000000;
+	padding: 4px 4px 4px 4px;
+}
+
+.total hr {
+	padding: 0px 0px 1px 0px;
+	color: #000000;
+	background-color: #000000;
+	width: 48px;
+}
+
+.item {
+	font-size: 60%;
+}
+
+table.item {
+	margin-bottom: 20px;
+	border: 1px solid #ffffff;
+	border-collapse: collapse;
+}
+
+table.item th {
+	padding: 4px 4px 4px 4px;
+	color: #000000;
+	background-color: #c0c0c0;
+	text-align: left;
+}
+
+table.item td {
+	border: 1px solid #ffffff;
+	color: #000000;
+	padding: 4px 4px 4px 4px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- $Gateweaver: cust_detail.html,v 1.1 2007/09/12 15:51:35 cmaxwell Exp $ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>%%TITLE%%</title>
+	<link rel="stylesheet" type="text/css" href="%%BASECSS%%" />
+</head>
+
+<body>
+
+<div id="main">
+%%HEADER%%
+
+<div class="outer"><div class="inner"><div class="float-wrap"><div id="content">
+<table class="list">
+	<tr><th scope="row"><b>Phone</b></th><td>%%CUSTPHONE%%</td></tr>
+	<tr><th scope="row"><b>Name</b></th><td>%%CUSTNAME%%</td></tr>
+	<tr><th scope="row"><b>Address</b></th><td>%%CUSTADDR%%</td></tr>
+	<tr><th scope="row"><b>Intersection</b></th><td>%%CUSTISECT%%</td></tr>
+	<tr><th scope="row"><b>Repetitions</b></th><td>%%CUSTREPS%%</td></tr>
+	<tr><th scope="row"><b>Special</b></th><td>%%CUSTSPECIAL%%</td></tr>
+	<tr><th scope="row"><b>Credits</b></th><td>%%CUSTCREDITS%%</td></tr>
+</table>
+
+<table class="list">
+<tr>
+	<th scope="col"><b>Credit</b></th>
+	<th scope="col"><b>Remain</b></th>
+	<th scope="col"><b>Reason</b></th>
+</tr>
+
+%%CUSTCREDITINFO%%
+
+<tr class="total">
+	<td><hr /></td>
+	<td><hr /></td>
+	<td></td>
+</tr>
+<tr>
+	<td>%%CUSTCREDTOTAL%%</td>
+	<td>%%CUSTCREDREMAIN%%</td>
+	<td></td>
+</tr>
+
+</table>
+</div></div></div></div>
+</div>
+
+%%FOOTER%%
+
+</body>
+</html>

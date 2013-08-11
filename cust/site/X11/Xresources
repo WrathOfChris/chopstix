@@ -1,0 +1,160 @@
+! $Gateweaver: Xresources,v 1.3 2007/09/21 14:36:25 cmaxwell Exp $
+! $Xorg: Xresources,v 1.3 2000/08/17 19:54:17 cpqbld Exp $
+! $OpenBSD: Xresources.cpp,v 1.3 2007/08/05 19:37:40 matthieu Exp $
+!
+!
+!
+!
+! $XFree86: xc/programs/xdm/config/Xres.cpp,v 1.6 2003/01/04 03:11:31 dawes Exp $
+!
+
+
+xlogin*login.translations: #override \
+	Ctrl<Key>R: abort-display()\n\
+	<Key>F1: set-session-argument(failsafe) finish-field()\n\
+	<Key>Left: move-backward-character()\n\
+	<Key>Right: move-forward-character()\n\
+	<Key>Home: move-to-begining()\n\
+	<Key>End: move-to-end()\n\
+	Ctrl<Key>KP_Enter: set-session-argument(failsafe) finish-field()\n\
+	<Key>KP_Enter: set-session-argument() finish-field()\n\
+	Ctrl<Key>Return: set-session-argument(failsafe) finish-field()\n\
+	<Key>Return: set-session-argument() finish-field()
+
+
+
+
+xlogin*greeting: Welcome to Chopstix
+xlogin*namePrompt: \040\040\040\040\040\040\040Login:
+
+xlogin*fail: Login incorrect
+
+#if WIDTH > 800
+xlogin*greetFont: -adobe-helvetica-bold-o-normal--24-240-75-75-p-138-iso8859-1
+xlogin*font: -adobe-helvetica-medium-r-normal--18-180-75-75-p-98-iso8859-1
+xlogin*promptFont: -adobe-helvetica-bold-r-normal--18-180-75-75-p-103-iso8859-1
+xlogin*failFont: -adobe-helvetica-bold-r-normal--18-180-75-75-p-103-iso8859-1
+xlogin*greetFace:	Sans-24:bold:italic
+xlogin*face: 		Sans-18
+xlogin*promptFace: 	Sans-18:bold
+xlogin*failFace: 	Sans-18:bold
+#else
+xlogin*greetFont: -adobe-helvetica-bold-o-normal--17-120-100-100-p-92-iso8859-1
+xlogin*font: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+xlogin*promptFont: -adobe-helvetica-bold-r-normal--12-120-75-75-p-70-iso8859-1
+xlogin*failFont: -adobe-helvetica-bold-o-normal--14-140-75-75-p-82-iso8859-1
+xlogin*greetFace:	Sans-16:bold:italic
+xlogin*face: 		Sans-12
+xlogin*promptFace: 	Sans-12:bold
+xlogin*failFace: 	Sans-12:bold
+#endif
+
+
+#if !(defined(bpp1) || defined(bpp4) || defined(bpp8) || defined(bpp15))
+# if PLANES < 4 || defined(Hp300Architecture)
+#  ifndef bpp1
+#   define bpp1
+#  endif
+# else
+#  if PLANES > 4
+#   if PLANES > 8
+#    ifndef bpp15
+#     define bpp15
+#    endif
+#   else
+#    ifndef bpp8
+#     define bpp8
+#    endif bpp8
+#   endif
+#  else
+#   ifndef bpp4
+#    define bpp4
+#   endif
+#  endif
+# endif
+#endif  /* If manual override */
+
+#ifndef bpp1
+
+
+
+xlogin*borderWidth: 2
+xlogin*frameWidth: 5
+xlogin*innerFramesWidth: 2
+
+! top/left border
+xlogin*hiColor: #6d9df2
+
+! bottom/right border
+xlogin*shdColor: #384c70
+
+! 'Welcome to..' text color
+xlogin*greetColor: #000000
+
+#if defined(bpp4) || defined(bpp8) || defined(bpp15)
+! flood fill
+!xlogin*background: #2559a5
+xlogin*background: #5272b6
+#endif
+xlogin*failColor: red
+
+! 'Login:' and 'Password:'
+*Foreground: #fbfeff
+
+! border/shadow
+*Background: #000000
+#else
+
+xlogin*borderWidth: 3
+xlogin*frameWidth: 5
+xlogin*innerFramesWidth: 1
+xlogin*shdColor: white
+xlogin*hiColor: white
+xlogin*greetColor: white
+xlogin*background: black
+xlogin*failColor: white
+xlogin*promptColor: white
+*Foreground: white
+*Background: black
+
+
+
+
+
+#endif
+
+#ifdef bpp1
+xlogin*logoFileName: /etc/X11/xdm/pixmaps/Chopstix.xpm
+#endif
+
+#if defined(bpp4) || defined(bpp8)
+xlogin*logoFileName: /etc/X11/xdm/pixmaps/Chopstix.xpm
+#endif
+#ifdef bpp15
+xlogin*logoFileName: /etc/X11/xdm/pixmaps/Chopstix.xpm
+#endif
+
+xlogin*useShape: true
+xlogin*logoPadding: 10
+
+
+
+! comment out to disable root logins
+xlogin.Login.allowRootLogin:	true
+
+XConsole*background:	black
+XConsole*foreground:	white
+XConsole*borderWidth:	2
+XConsole*borderColor:   grey
+XConsole.text.geometry:	480x130
+XConsole.verbose:	true
+XConsole*iconic:	true
+XConsole*font:		fixed
+
+Chooser*geometry:		700x500+300+200
+Chooser*allowShellResize:	false
+Chooser*viewport.forceBars:	true
+Chooser*label.font:		*-new century schoolbook-bold-i-normal-*-240-*
+Chooser*label.label:		XDMCP Host Menu from CLIENTHOST
+Chooser*list.font:		-*-*-medium-r-normal-*-*-230-*-*-c-*-iso8859-1
+Chooser*Command.font:		*-new century schoolbook-bold-r-normal-*-180-*

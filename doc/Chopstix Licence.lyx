@@ -1,0 +1,484 @@
+#LyX 1.4.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 245
+\begin_document
+\begin_header
+\textclass book
+\begin_preamble
+\usepackage{ae,aecompl}
+\def\RCS$#1: #2 ${\expandafter\def\csname RCS#1\endcsname{#2}}
+\RCS$Revision: 1.2 $
+\RCS$Date: 2007/10/07 23:09:32 $
+\RCS$Author: cmaxwell $
+\def\REP$#1: #2 ${\expandafter\def\csname REP#1\endcsname{#2}}
+\REP$Chopstix: Chopstix 1.1 $
+\REP$ChopstixVer: 1.1 $
+\REP$OpenBSD: OpenBSD 4.2 $
+\REP$ManorWeb: www.manorsoft.ca $
+\REP$ManorEmail: manorsoft.ca $
+\REP$ManorPhone: (905) 000-0000 $
+\REP$ManorFax: (905) 000-0000 $
+\end_preamble
+\language english
+\inputencoding auto
+\fontscheme bookman
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 0.5in
+\topmargin 0.75in
+\rightmargin 0.5in
+\bottommargin 0.5in
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter*
+\begin_inset Graphics
+	filename ChopstixLogo.gif
+
+\end_inset
+
+
+\newline
+Chopstix Software Licence Terms
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Document Information
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing single
+\noindent
+\align left
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features>
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Version:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPChopstix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Updated:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+RCSDate
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+By:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+RCSAuthor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Revision:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+RCSRevision
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Manorsoft
+\end_layout
+
+\begin_layout Address
+No longer active
+\newline
+Nowhere, Ontario
+\newline
+H0H 0H0
+\newline
+http://
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPManorWeb
+\end_layout
+
+\end_inset
+
+
+\newline
+Tel: 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPManorPhone
+\end_layout
+
+\end_inset
+
+
+\newline
+Email: info@
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+REPManorEmail
+\end_layout
+
+\end_inset
+
+
+\newpage
+
+\end_layout
+
+\begin_layout Subsection*
+Chopstix Software Licence Terms
+\end_layout
+
+\begin_layout Standard
+These licence terms are an agreement between Manorsoft and you.
+ Please read them carefully.
+ They apply to the software and licence certificate you are being provided
+ which includes the media on which you received it, if any.
+ The terms also apply to any updates, supplements, internet-based services
+ and support services for this software, unless other terms accompany those
+ items.
+ If so, those terms apply.
+\end_layout
+
+\begin_layout Paragraph
+BY USING THE SOFTWARE, YOU ACCEPT THESE TERMS.
+ IF YOU DO NOT ACCEPT THEM, DO NOT USE THE SOFTWARE.
+\end_layout
+
+\begin_layout Paragraph
+
+\series medium
+If you comply with these licence terms, you have the rights below.
+\end_layout
+
+\begin_layout Subsection*
+Installation and User Rights
+\end_layout
+
+\begin_layout Standard
+You may
+\end_layout
+
+\begin_layout Itemize
+install and use any number of copies of the software on devices in the single
+ location specified by your licence certificate;
+\end_layout
+
+\begin_layout Itemize
+use the software remotely over a network;
+\end_layout
+
+\begin_layout Itemize
+make twelve copies of the software for archival purposes;
+\end_layout
+
+\begin_layout Itemize
+make unlimited copies of the licence certificate for archival purposes;
+ and
+\end_layout
+
+\begin_layout Itemize
+after written notice to Manorsoft and subject to payment of the current
+ licence transfer fee, transfer the software on a permanent basis to another
+ person or entity, provided that you retain no copies of the software and
+ the transferee agrees to the terms of this agreement.
+\end_layout
+
+\begin_layout Subsection*
+Scope of Licence
+\end_layout
+
+\begin_layout Standard
+The software is licenced, not sold.
+ This agreement only gives you some rights to use the software.
+ Manorsoft reserves all other rights.
+ Unless applicable law gives you more rights despite this limitation, you
+ may use the software only as expressly permitted in this agreement.
+ In doing so, you must comply with any technical limitations in the software
+ that only allow you to use it in certain ways.
+ You may not
+\end_layout
+
+\begin_layout Itemize
+work around any technical limitations in the software;
+\end_layout
+
+\begin_layout Itemize
+reverse engineer, decompile or disassemble the software, except and only
+ to the extent that applicable law expressly permits despite this limitation;
+\end_layout
+
+\begin_layout Itemize
+make more copies of the software other than specified in this agreement
+ or allowed by applicable law, despite this limitation;
+\end_layout
+
+\begin_layout Itemize
+publish the software for others to copy;
+\end_layout
+
+\begin_layout Itemize
+rent, lease or lend the software;
+\end_layout
+
+\begin_layout Itemize
+transfer the software or this agreement to any third party; or
+\end_layout
+
+\begin_layout Itemize
+use the software for commercial software hosting services.
+\end_layout
+
+\begin_layout Subsection*
+Documentation
+\end_layout
+
+\begin_layout Standard
+Any person that has valid access to your computer or internal network may
+ copy and use the documentation for your internal, reference purposes.
+\end_layout
+
+\begin_layout Subsection*
+Entire Agreement
+\end_layout
+
+\begin_layout Standard
+This agreement, and the terms for supplements, updates, Internet-based services
+ and support services that you use, are the entire agreement for the software
+ and support services.
+\end_layout
+
+\begin_layout Subsection*
+Applicable Law
+\end_layout
+
+\begin_layout Standard
+Canada.
+ If you acquired the software in Canada, Ontario law governs the interpretation
+ of this agreement and applies to claims fro breach of it, regardless of
+ conflict of laws principles.
+ The laws of the province where you live govern all other claims, including
+ claims under provincial consumer protection laws, unfair competition laws,
+ and in tort.
+\end_layout
+
+\begin_layout Standard
+Outside of Canada.
+ If you acquired the software in any other country, the laws of that country
+ apply.
+\end_layout
+
+\begin_layout Subsection*
+Legal Effect
+\end_layout
+
+\begin_layout Standard
+This agreement describes certain legal rights.
+ You may have other rights under the laws of your country.
+ You may also have rights with respect to the party from whom you acquired
+ the software.
+ This agreement does not change your rights under the laws of your country
+ if the laws of your country do not permit it to do so.
+\end_layout
+
+\begin_layout Subsection*
+Disclaimer of Warranty
+\end_layout
+
+\begin_layout Standard
+The software is licensed "as-is." You bear the risk of using it.
+ Manorsoft gives no express warranties, guarantees or conditions.
+ You may have additional consumer rights under your local laws which this
+ agreement cannot change.
+ To the extent permitted under your local laws, Manorsoft excludes the implied
+ warranties of merchantability, fitness for a particular purpose and non-infring
+ement.
+\end_layout
+
+\begin_layout Subsection*
+Limitation on and Exclusion of Remedies and Damages
+\end_layout
+
+\begin_layout Standard
+You can recover from Manorsoft and its suppliers only direct damages up
+ to CDN $5.00.
+ You cannot recover any other damages, including consequential, lost profits,
+ special, indirect or incidental damages.
+ 
+\end_layout
+
+\begin_layout Standard
+This limitation applies to
+\end_layout
+
+\begin_layout Itemize
+anything related to the software, services, content (including code) on
+ third party Internet sites, or third party programs; and
+\end_layout
+
+\begin_layout Itemize
+claims for breach of contract, breach of warranty, guarantee or condition,
+ strict liability, negligence, or other tort to the extent permitted by
+ applicable law.
+ 
+\end_layout
+
+\begin_layout Standard
+It also applies even if Manorsoft knew or should have known about the possibilit
+y of the damages.
+ The above limitation or exclusion may not apply to you because your country
+ may not allow the exclusion or limitation of incidental, consequential
+ or other damages.
+\end_layout
+
+\end_body
+\end_document

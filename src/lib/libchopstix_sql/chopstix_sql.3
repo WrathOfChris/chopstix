@@ -1,0 +1,97 @@
+.\"	$Gateweaver: chopstix_sql.3,v 1.3 2007/10/15 17:26:37 cmaxwell Exp $: mdoc.template,v 1.9 2004/07/02 10:36:57 jmc Exp $
+.\"
+.\" The following requests are required for all man pages.
+.Dd November 26, 2005
+.Dt chopstix_sql 3
+.Os
+.Sh NAME
+.Nm chopstix_sql
+.Nd a SQLite database module for the chopstix order-entry system.
+.Sh SYNOPSIS
+.\" For a program:  program [-abc] file ...
+.Nm chopstix_sql
+.\".Op Fl abc
+.\".Ar
+.Sh DESCRIPTION
+The
+.Nm
+library module adds a SQLite backend database for customers, menu items and
+orders.
+.\" The following requests should be uncommented and used where appropriate.
+.\" This next request is for sections 2, 3, and 9 function return values only.
+.\" .Sh RETURN VALUES
+.\" This next request is for sections 1, 6, 7 & 8 only.
+.\" .Sh ENVIRONMENT
+.Sh FILES
+.Bl -tag -width /var/log/wtmp -compact
+.It Pa /var/db/chopstix/chopstix.db
+SQLite database
+.El
+.Sh EXAMPLES
+A
+.Em customer
+record is identified by an unique telephone number, and an internal identfier
+allowing a change to telephone number while keeping associated records.
+Tables that reference this identifier are:
+.Em credits ,
+and
+.Em orders .
+.Pp
+The
+.Em menuitems
+table contains the list of all menu items ever offered.
+No item should ever be deleted from this table.
+To remove an item from the menu, create a new menu item with the same
+.Em Code ,
+but an increased
+.Em Generation
+number.
+.Pp
+To remove a menu item style, the specific row in the
+.Em menustyles
+table must have its
+.Em MID
+set to an unused
+.Em ID
+in the
+.Em menuitems
+table, such as zero (0).
+.\" This next request is for sections 1, 4, 6, and 8 only.
+.\" .Sh DIAGNOSTICS
+.\" The next request is for sections 2, 3, and 9 error and signal handling only.
+.\" .Sh ERRORS
+.\" .Sh SEE ALSO
+.\" .Xr foobar 1
+.\" .Sh STANDARDS
+.Sh HISTORY
+The
+.Nm
+library first appeared as a module of
+.Xr chopstix 1
+written for Chopsticks restaurant.
+.Sh AUTHORS
+The
+.Nm
+library was written by Christopher Maxwell (chris@manorsoft.ca)
+.Sh CAVEATS
+The SQLite library requires access to the database directory for locking and
+journalling.
+For this reason, the database must reside in a writeable directory.
+.Pp
+Removing or changing rows from the following tables may cause failures when
+recalling orders:
+.Em customers ,
+.Em menuitems ,
+.Em menustyles ,
+and
+.Em orderitems .
+Each table has a specified method of disabling rows, as documented in
+.Em EXAMPLES
+above.
+.Sh BUGS
+It is currently impossible to disable or change a menu item.  SQLite does not
+(yet) support the multicolumn constraints required to uniquely identify the
+.Em Code
+/
+.Em Generation
+pair used to implement versioned menus.

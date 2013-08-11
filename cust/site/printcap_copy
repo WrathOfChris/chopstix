@@ -1,0 +1,6 @@
+#!/bin/sh
+# $Gateweaver: printcap_copy,v 1.1 2007/09/06 19:33:21 cmaxwell Exp $
+THISDATE=`date +%F.%T | sed "s/:/\./g"`
+TMPFILE=`mktemp /var/db/chopstix/receipts/chopstix.${THISDATE}.XXXXXXXX`
+cat | tee ${TMPFILE}
+chmod 640 ${TMPFILE}

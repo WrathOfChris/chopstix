@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Calculator
+Comment=X Calculator
+Exec=xcalc
+Type=Application
+Icon=mbnoapp.png
+Categories=Other

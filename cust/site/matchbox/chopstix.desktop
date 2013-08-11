@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Chopstix
+Comment=Chopstix Order Entry System
+Exec=rxvt -bg black -fg white -cr 9 -pr 10 -fn -*-neep-*-*-*-*-*-140-*-*-*-*-*-* -tn xterm-color -sr +sb -title Chopstix -e mb-chopstix-exec chopstix
+Icon=mbmenu.png
+Type=Application
+Categories=Root

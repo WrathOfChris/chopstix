@@ -1,0 +1,4 @@
+# $Gateweaver: README,v 1.1 2007/09/06 19:33:21 cmaxwell Exp $
+
+To generate cert.pem use:
+	openssl x509 -text -fingerprint -sha1
